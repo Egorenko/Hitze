@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="stats_heat" format=3 uid="uid://betarkyiy3efg"]
+
+[ext_resource type="Script" uid="uid://bpkrb2apyqe55" path="res://scripts/stats/stats_heat.gd" id="1_df7v0"]
+
+[resource]
+script = ExtResource("1_df7v0")
+name = "HeatTest"
+metadata/_custom_type_script = "uid://bpkrb2apyqe55"

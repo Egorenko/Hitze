@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="stats_money" format=3 uid="uid://oe01m1ojxsvd"]
+
+[ext_resource type="Script" uid="uid://cdsqrnmcwy2ja" path="res://scripts/stats/stats_money.gd" id="1_rwuu2"]
+
+[resource]
+script = ExtResource("1_rwuu2")
+name = "MoneyTest"
+metadata/_custom_type_script = "uid://cdsqrnmcwy2ja"

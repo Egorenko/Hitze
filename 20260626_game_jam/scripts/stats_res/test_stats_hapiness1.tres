@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="stats_happiness" format=3 uid="uid://b8k7u7wupgxf5"]
+
+[ext_resource type="Script" uid="uid://dpwto7v084qbt" path="res://scripts/stats/stats_happiness.gd" id="1_j4yqo"]
+
+[resource]
+script = ExtResource("1_j4yqo")
+name = "HappinessTest"
+metadata/_custom_type_script = "uid://dpwto7v084qbt"
