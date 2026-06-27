@@ -11,4 +11,25 @@ offset_top = 550.0
 offset_right = 1100.0
 offset_bottom = 600.0
 
+[node name="LineMoney" type="Line2D" parent="." unique_id=2030511851]
+points = PackedVector2Array(38, 445, 34, 593)
+
+[node name="LineHeat" type="Line2D" parent="." unique_id=1811252029]
+points = PackedVector2Array(43, 237, 36, 370)
+
+[node name="LineHappiines" type="Line2D" parent="." unique_id=1537679031]
+points = PackedVector2Array(43, 37, 41, 162)
+
+[node name="ButtonNo" type="Button" parent="." unique_id=1229762272]
+offset_left = 111.0
+offset_top = 564.0
+offset_right = 306.0
+offset_bottom = 617.0
+
+[node name="ButtonYes" type="Button" parent="." unique_id=1407809579]
+offset_left = 630.0
+offset_top = 562.0
+offset_right = 846.0
+offset_bottom = 609.0
+
 [connection signal="button_down" from="Button" to="." method="spawn_card"]

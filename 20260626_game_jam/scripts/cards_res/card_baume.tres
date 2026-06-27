@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="card_klima" format=3 uid="uid://bkroufekcch2e"]
+
+[ext_resource type="Script" uid="uid://cbq0ws7nq0c10" path="res://scripts/cards/card_klima.gd" id="1_mcdv5"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_mcdv5")
+name = "Bäume pflanzen"
+text = "Stadt wird grüner, Tiere werden sicherere, nur Geld wird weniger."
+stats = {
+"HappinesTest": 4,
+"HeatTest": 14,
+"MoneyTest": -3
+}
+metadata/_custom_type_script = "uid://cbq0ws7nq0c10"

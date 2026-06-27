@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="card_money" format=3 uid="uid://c530dgg5q5es5"]
+
+[ext_resource type="Script" uid="uid://bkwbscvsv0u32" path="res://scripts/cards/card_money.gd" id="1_tjxsa"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_tjxsa")
+name = "Prämie"
+text = "Alle kriegen ab und zu Prämien, wieso du nicht? Und vor allem, das ist doch gar nicht schlimm oder?"
+stats = {
+"HappinessTest": -10,
+"HeatTest": 0,
+"MoneyTest": 15
+}
+metadata/_custom_type_script = "uid://bkwbscvsv0u32"

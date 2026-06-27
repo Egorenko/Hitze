@@ -4,8 +4,17 @@ var dragging: bool = false
 var drag_start: Vector2 = Vector2.ZERO
 var origin: Vector2 = Vector2.ZERO
 signal card_played(direction: String)
+@export var card_data: card
+
+@onready var label_name: Label = $LabelName
+@onready var label_text: Label = $LabelText
 
 const SWIPE_THRESHOLD: float = 150.0
+
+func setup(data: card) -> void:
+	card_data = data
+	label_name.text = card_data.name
+	label_text.text = card_data.text
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
@@ -35,11 +44,13 @@ func _check_swipe(end_pos: Vector2) -> void:
 
 func _on_swipe_right() -> void:
 	card_played.emit("right")
+	card_data.on_yes()
 	print("Swipe Right")
 
 
 func _on_swipe_left() -> void:
 	card_played.emit("left")
+	card_data.on_no()
 	print("Swipe Left")
 
 func _ready() -> void:
@@ -50,3 +61,9 @@ func _on_mouse_exited() -> void:
 		queue_free()
 		dragging = false
 		global_position = origin
+		
+func swipe_to(direction: String) -> void:
+	if direction == "right":
+		global_position.x = global_position.x + 5000
+	else:
+		global_position.x = global_position.x - 5000

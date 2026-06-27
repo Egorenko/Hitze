@@ -1,11 +1,30 @@
 [gd_scene format=3 uid="uid://cgnhm1akexdvm"]
 
+[ext_resource type="Texture2D" uid="uid://4snf3go1bq5x" path="res://assets/card.png" id="1_6u4wf"]
 [ext_resource type="Script" uid="uid://dkak0jk4gjimg" path="res://scenes/card.gd" id="1_d81rb"]
+[ext_resource type="Resource" uid="uid://c530dgg5q5es5" path="res://scripts/cards_res/card_praemie.tres" id="3_ktuci"]
 
 [node name="Card" type="Sprite2D" unique_id=2126844789]
+position = Vector2(538, 322)
+texture = ExtResource("1_6u4wf")
 script = ExtResource("1_d81rb")
+card_data = ExtResource("3_ktuci")
 
-[node name="Line2D" type="Line2D" parent="." unique_id=1437947577]
-position = Vector2(-2619.111, -179.78912)
-scale = Vector2(5.555556, 1.6618183)
-points = PackedVector2Array(561, 191, 564, 446, 583, 316, 604, 315)
+[node name="LabelName" type="Label" parent="." unique_id=451787537]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(1, 1, 1, 0.9647059)
+offset_left = -63.0
+offset_top = -142.0
+offset_right = 68.0
+offset_bottom = -119.0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LabelText" type="Label" parent="." unique_id=1762514176]
+modulate = Color(0, 0, 0, 1)
+offset_left = -67.0
+offset_top = -69.0
+offset_right = 67.0
+offset_bottom = 140.0
+autowrap_mode = 3
+text_overrun_behavior = 2

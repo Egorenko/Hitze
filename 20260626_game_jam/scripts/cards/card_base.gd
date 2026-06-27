@@ -2,14 +2,14 @@
 
 @export var name: String = "/CardName"
 @export var text: String = "/CardText"
-@export var stats: Array[stats] = []
+@export var stats: Dictionary
 
 @abstract func on_yes() -> void
 
 @abstract func on_no() -> void
 
-func apply(player: player_manager) -> void:
+func apply(st: stats) -> void:
 	for card_stat in stats:
-		for player_stat in player.stat:
-			if card_stat.name == player_stat.name:
-				player_stat.change(card_stat.cur, card_stat.operants.add)   
+		for player_stat in st:
+			if card_stat == player_stat.name:
+				player_stat.change(stats[card_stat], 0)   

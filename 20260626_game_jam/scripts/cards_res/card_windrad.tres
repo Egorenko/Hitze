@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="card_build" format=3 uid="uid://ct5hfj0wgkhjk"]
+
+[ext_resource type="Script" uid="uid://rexv71v71sii" path="res://scripts/cards/card_build.gd" id="1_k3jfj"]
+
+[resource]
+script = ExtResource("1_k3jfj")
+name = "Windräder bauen"
+text = "Wenn Wind da ist, sind die coll und nützlich. Wenn Wind nicht da, sind die weiterhin cool."
+stats = {
+"HappinesTest": -14,
+"HeatTest": 10,
+"MoneyTest": -15
+}
+metadata/_custom_type_script = "uid://rexv71v71sii"
