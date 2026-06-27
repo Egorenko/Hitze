@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="card_new" format=3 uid="uid://b6dkx08funhhs"]
+
+[ext_resource type="Script" uid="uid://beiy0k8bxs7cb" path="res://scripts/card_effect/card_effect.gd" id="1_4aqk3"]
+[ext_resource type="Script" uid="uid://b5e8fc5etbw2e" path="res://scripts/math_operators/math_sub.gd" id="2_f1g42"]
+[ext_resource type="Script" uid="uid://kqivetqsxq66" path="res://scripts/card_new/card_new.gd" id="2_jjbda"]
+[ext_resource type="Resource" uid="uid://b8k7u7wupgxf5" path="res://scripts/stats_res/test_stats_hapiness1.tres" id="3_oelue"]
+[ext_resource type="Script" uid="uid://dg235ouwyxe7y" path="res://scripts/math_operators/math_add.gd" id="3_xh4gj"]
+[ext_resource type="Resource" uid="uid://betarkyiy3efg" path="res://scripts/stats_res/test_stats_heat1.tres" id="6_gd07y"]
+
+[sub_resource type="Resource" id="Resource_3kn82"]
+script = ExtResource("2_f1g42")
+metadata/_custom_type_script = "uid://b5e8fc5etbw2e"
+
+[sub_resource type="Resource" id="Resource_06f5i"]
+script = ExtResource("1_4aqk3")
+value = 100.0
+operation = SubResource("Resource_3kn82")
+stat = ExtResource("3_oelue")
+metadata/_custom_type_script = "uid://beiy0k8bxs7cb"
+
+[sub_resource type="Resource" id="Resource_gd07y"]
+script = ExtResource("3_xh4gj")
+metadata/_custom_type_script = "uid://dg235ouwyxe7y"
+
+[sub_resource type="Resource" id="Resource_oelue"]
+script = ExtResource("1_4aqk3")
+value = 100.0
+operation = SubResource("Resource_gd07y")
+stat = ExtResource("6_gd07y")
+metadata/_custom_type_script = "uid://beiy0k8bxs7cb"
+
+[resource]
+script = ExtResource("2_jjbda")
+text = "y +100 he; n -100 ha"
+yes_effects = Array[ExtResource("1_4aqk3")]([SubResource("Resource_oelue")])
+no_effects = Array[ExtResource("1_4aqk3")]([SubResource("Resource_06f5i")])
+metadata/_custom_type_script = "uid://kqivetqsxq66"

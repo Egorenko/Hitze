@@ -59,6 +59,7 @@ func _on_card_played(direction: String) -> void:
 
 
 func on_win() -> void:
+	print("WIN")
 	pass
 
 func _button_swipe(direction: String) -> void:

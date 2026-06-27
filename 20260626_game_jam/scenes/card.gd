@@ -23,6 +23,7 @@ func _input(event: InputEvent) -> void:
 			drag_start = event.position
 			origin = global_position
 		else:
+			#allways right
 			_check_swipe(event.position)
 			dragging = false
 
