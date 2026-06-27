@@ -72,8 +72,8 @@ func spawn_card() -> void:
 
 func load_card(c:card_new) -> void:
 	print("card spawned")
-	card_body.global_position = card_pos
 	card_body.setup(c)
+	card_body.global_position = card_pos
 	card_on()
 
 func card_on() -> void:
@@ -95,6 +95,8 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_down"):
 		for el in all_cards.cards:
 			print(el.name, " + ", el.amount)
+	if event.is_action_pressed("ui_up"):
+		print(card_pos)
 
 
 func on_win() -> void:
@@ -108,11 +110,13 @@ func _button_swipe(direction: String) -> void:
 
 
 func _on_button_no_button_down() -> void:
-	card_body.card_data.on_no()
-	card_off()
+	if card_on_feld:
+		card_body.card_data.on_no()
+		card_off()
 	pass # Replace with function body.
 
 func _on_button_yes_button_down() -> void:
-	card_body.card_data.on_yes()
-	card_off()
+	if card_on_feld:
+		card_body.card_data.on_yes()
+		card_off()
 	pass # Replace with function body.
