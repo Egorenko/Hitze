@@ -6,8 +6,6 @@ load("res://scripts/stats/stats_heat.gd"),
 load("res://scripts/stats/stats_money.gd")
 ]
 
-func _ready() -> void:
-	pass
-
-func _process(delta: float) -> void:
+func on_lose() -> void:
+	#load and overlay lose_screen
 	pass

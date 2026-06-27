@@ -5,6 +5,9 @@ class_name card_new extends Resource
 @export var yes_effects:Array[card_effect]
 @export var no_effects:Array[card_effect]
 
+#wip
+@export var propability:float = 1.0
+
 func on_yes() -> void:
 	for el in yes_effects:
 		for player_stat in PlayerManager.stat:
