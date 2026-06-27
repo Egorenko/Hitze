@@ -1,12 +1,20 @@
 [gd_scene format=3 uid="uid://clme6234ehbjq"]
 
 [ext_resource type="Script" uid="uid://bjc1ykksgn7pd" path="res://scenes/main.gd" id="1_o5qli"]
+[ext_resource type="Script" uid="uid://cdxtyfw1ygdhm" path="res://scripts/card_new/card_stack.gd" id="2_jyhfs"]
 [ext_resource type="Script" uid="uid://kqivetqsxq66" path="res://scripts/card_new/card_new.gd" id="2_sugp2"]
 [ext_resource type="Resource" uid="uid://b6dkx08funhhs" path="res://scripts/card_new/card_baume_wEffect.tres" id="3_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://8f5abqyd2juo" path="res://scenes/card_new.tscn" id="5_tbgi4"]
+
+[sub_resource type="Resource" id="Resource_0wfyh"]
+script = ExtResource("2_jyhfs")
+cards = Array[ExtResource("2_sugp2")]([ExtResource("3_jyhfs")])
+appearances = 10
+metadata/_custom_type_script = "uid://cdxtyfw1ygdhm"
 
 [node name="main" type="Node2D" unique_id=1392902479]
 script = ExtResource("1_o5qli")
-all_cards = Array[ExtResource("2_sugp2")]([ExtResource("3_jyhfs")])
+all_cards = SubResource("Resource_0wfyh")
 
 [node name="Button" type="Button" parent="." unique_id=869369368]
 offset_left = 1050.0
@@ -35,4 +43,8 @@ offset_top = 562.0
 offset_right = 846.0
 offset_bottom = 609.0
 
+[node name="Card" parent="." unique_id=2126844789 instance=ExtResource("5_tbgi4")]
+
 [connection signal="button_down" from="Button" to="." method="spawn_card"]
+[connection signal="button_down" from="ButtonNo" to="." method="_on_button_no_button_down"]
+[connection signal="button_down" from="ButtonYes" to="." method="_on_button_yes_button_down"]

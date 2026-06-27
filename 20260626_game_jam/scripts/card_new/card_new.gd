@@ -7,6 +7,7 @@ class_name card_new extends Resource
 
 #wip
 @export var propability:float = 1.0
+var amount:int = 1
 
 func on_yes() -> void:
 	for el in yes_effects:

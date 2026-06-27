@@ -2,12 +2,14 @@ extends Sprite2D
 #drag'n drop
 var dragging: bool = false
 var drag_start: Vector2 = Vector2.ZERO
-var origin: Vector2 = Vector2.ZERO
+@onready var origin:Vector2 = self.global_position
 
 const SWIPE_THRESHOLD: float = 150.0
 
 signal card_played(direction: String)
 @export var card_data:card_new
+
+var moveable:bool = false
 
 @onready var label_name: Label = $LabelName
 @onready var label_text: Label = $LabelText
@@ -16,10 +18,11 @@ func setup(data: card_new) -> void:
 	card_data = data
 	label_name.text = card_data.name
 	label_text.text = card_data.text
+	global_position = origin
 
 #darg'n drop movement
 func _input(event: InputEvent) -> void:
-	if event is InputEventMouseButton:
+	if event is InputEventMouseButton and moveable:
 		if event.pressed:
 			dragging = true
 			drag_start = event.position
