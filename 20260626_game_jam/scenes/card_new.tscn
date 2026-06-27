@@ -1,10 +1,7 @@
-[gd_scene format=3 uid="uid://cgnhm1akexdvm"]
-
-[ext_resource type="Script" uid="uid://dkak0jk4gjimg" path="res://scenes/card.gd" id="1_d81rb"]
+[gd_scene format=3 uid="uid://8f5abqyd2juo"]
 
 [node name="Card" type="Sprite2D" unique_id=2126844789]
 position = Vector2(538, 322)
-script = ExtResource("1_d81rb")
 
 [node name="LabelName" type="Label" parent="." unique_id=451787537]
 modulate = Color(0, 0, 0, 1)
