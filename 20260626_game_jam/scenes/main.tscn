@@ -4,11 +4,18 @@
 [ext_resource type="Script" uid="uid://cdxtyfw1ygdhm" path="res://scripts/card_new/card_stack.gd" id="2_jyhfs"]
 [ext_resource type="Script" uid="uid://kqivetqsxq66" path="res://scripts/card_new/card_new.gd" id="2_sugp2"]
 [ext_resource type="Resource" uid="uid://b6dkx08funhhs" path="res://scripts/card_new/card_baume_wEffect.tres" id="3_jyhfs"]
+[ext_resource type="Script" uid="uid://beiy0k8bxs7cb" path="res://scripts/card_effect/card_effect.gd" id="4_tefeu"]
 [ext_resource type="PackedScene" uid="uid://8f5abqyd2juo" path="res://scenes/card_new.tscn" id="5_tbgi4"]
+
+[sub_resource type="Resource" id="Resource_tbgi4"]
+script = ExtResource("2_sugp2")
+name = "/CardName2"
+metadata/_custom_type_script = "uid://kqivetqsxq66"
 
 [sub_resource type="Resource" id="Resource_0wfyh"]
 script = ExtResource("2_jyhfs")
-cards = Array[ExtResource("2_sugp2")]([ExtResource("3_jyhfs")])
+cards = Array[ExtResource("2_sugp2")]([ExtResource("3_jyhfs"), SubResource("Resource_tbgi4")])
+all_same_probpability = true
 appearances = 10
 metadata/_custom_type_script = "uid://cdxtyfw1ygdhm"
 
