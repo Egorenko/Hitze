@@ -18,6 +18,8 @@ var test_stats: Array[stats] = []
 @onready var yes = $ButtonYes
 @onready var no = $ButtonNo
 
+@export var all_cards:Array[card_new]
+
 func _ready() -> void:
 	test_stats.append(test_happiness)
 	test_stats.append(test_heat)
