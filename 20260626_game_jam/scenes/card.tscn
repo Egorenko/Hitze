@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cgnhm1akexdvm"]
+
+[ext_resource type="Script" uid="uid://dkak0jk4gjimg" path="res://scenes/card.gd" id="1_d81rb"]
+
+[node name="Card" type="Sprite2D" unique_id=2126844789]
+script = ExtResource("1_d81rb")
+
+[node name="Line2D" type="Line2D" parent="." unique_id=1437947577]
+position = Vector2(-2619.111, -179.78912)
+scale = Vector2(5.555556, 1.6618183)
+points = PackedVector2Array(561, 191, 564, 446, 583, 316, 604, 315)

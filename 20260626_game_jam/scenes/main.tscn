@@ -10,3 +10,5 @@ offset_left = 1050.0
 offset_top = 550.0
 offset_right = 1100.0
 offset_bottom = 600.0
+
+[connection signal="button_down" from="Button" to="." method="spawn_card"]
