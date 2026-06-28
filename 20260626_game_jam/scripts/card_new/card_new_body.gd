@@ -22,18 +22,21 @@ func setup(data: card_new) -> void:
 
 #darg'n drop movement
 func _input(event: InputEvent) -> void:
+	return
 	if event is InputEventMouseButton and moveable:
 		if event.pressed:
 			dragging = true
 			drag_start = event.position
 			origin = global_position
 		else:
-			#allways right
+			#allways right when button pressed (not only drag'n drop)
+			print("err")
 			_check_swipe(event.position)
 			dragging = false
 	
 	if event is InputEventMouseMotion and dragging:
 		global_position = origin + (event.position - drag_start)
+
 
 func _check_swipe(end_pos: Vector2) -> void:
 	var diff: Vector2 = end_pos - drag_start

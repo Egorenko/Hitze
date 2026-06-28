@@ -3,18 +3,75 @@
 [ext_resource type="Script" uid="uid://bjc1ykksgn7pd" path="res://scenes/main.gd" id="1_o5qli"]
 [ext_resource type="Script" uid="uid://cdxtyfw1ygdhm" path="res://scripts/card_new/card_stack.gd" id="2_jyhfs"]
 [ext_resource type="Script" uid="uid://kqivetqsxq66" path="res://scripts/card_new/card_new.gd" id="2_sugp2"]
-[ext_resource type="Resource" uid="uid://b6dkx08funhhs" path="res://scripts/card_new/card_baume_wEffect.tres" id="3_jyhfs"]
 [ext_resource type="Script" uid="uid://beiy0k8bxs7cb" path="res://scripts/card_effect/card_effect.gd" id="4_tefeu"]
+[ext_resource type="Script" uid="uid://b5e8fc5etbw2e" path="res://scripts/math_operators/math_sub.gd" id="5_85g3d"]
+[ext_resource type="Resource" uid="uid://b8k7u7wupgxf5" path="res://scripts/stats_res/test_stats_hapiness1.tres" id="5_choun"]
 [ext_resource type="PackedScene" uid="uid://8f5abqyd2juo" path="res://scenes/card_new.tscn" id="5_tbgi4"]
+[ext_resource type="Resource" uid="uid://betarkyiy3efg" path="res://scripts/stats_res/test_stats_heat1.tres" id="7_eb6dy"]
+[ext_resource type="Script" uid="uid://dg235ouwyxe7y" path="res://scripts/math_operators/math_add.gd" id="7_ya4ey"]
+[ext_resource type="Resource" uid="uid://oe01m1ojxsvd" path="res://scripts/stats_res/test_stats_money1.tres" id="8_choun"]
+
+[sub_resource type="Resource" id="Resource_3kn82"]
+script = ExtResource("5_85g3d")
+metadata/_custom_type_script = "uid://b5e8fc5etbw2e"
+
+[sub_resource type="Resource" id="Resource_06f5i"]
+script = ExtResource("4_tefeu")
+value = 100.0
+operation = SubResource("Resource_3kn82")
+stat = ExtResource("5_choun")
+metadata/_custom_type_script = "uid://beiy0k8bxs7cb"
+
+[sub_resource type="Resource" id="Resource_gd07y"]
+script = ExtResource("7_ya4ey")
+metadata/_custom_type_script = "uid://dg235ouwyxe7y"
+
+[sub_resource type="Resource" id="Resource_oelue"]
+script = ExtResource("4_tefeu")
+value = 100.0
+operation = SubResource("Resource_gd07y")
+stat = ExtResource("7_eb6dy")
+metadata/_custom_type_script = "uid://beiy0k8bxs7cb"
+
+[sub_resource type="Resource" id="Resource_trceg"]
+script = ExtResource("2_sugp2")
+text = "y +100 he; n -100 ha"
+yes_effects = Array[ExtResource("4_tefeu")]([SubResource("Resource_oelue")])
+no_effects = Array[ExtResource("4_tefeu")]([SubResource("Resource_06f5i")])
+metadata/_custom_type_script = "uid://kqivetqsxq66"
+
+[sub_resource type="Resource" id="Resource_ya4ey"]
+script = ExtResource("5_85g3d")
+metadata/_custom_type_script = "uid://b5e8fc5etbw2e"
+
+[sub_resource type="Resource" id="Resource_choun"]
+script = ExtResource("4_tefeu")
+value = 1.0
+operation = SubResource("Resource_ya4ey")
+stat = ExtResource("8_choun")
+metadata/_custom_type_script = "uid://beiy0k8bxs7cb"
+
+[sub_resource type="Resource" id="Resource_o6xl0"]
+script = ExtResource("7_ya4ey")
+metadata/_custom_type_script = "uid://dg235ouwyxe7y"
+
+[sub_resource type="Resource" id="Resource_tefeu"]
+script = ExtResource("4_tefeu")
+value = 1.0
+operation = SubResource("Resource_o6xl0")
+stat = ExtResource("8_choun")
+metadata/_custom_type_script = "uid://beiy0k8bxs7cb"
 
 [sub_resource type="Resource" id="Resource_tbgi4"]
 script = ExtResource("2_sugp2")
 name = "/CardName2"
+yes_effects = Array[ExtResource("4_tefeu")]([SubResource("Resource_tefeu")])
+no_effects = Array[ExtResource("4_tefeu")]([SubResource("Resource_choun")])
 metadata/_custom_type_script = "uid://kqivetqsxq66"
 
 [sub_resource type="Resource" id="Resource_0wfyh"]
 script = ExtResource("2_jyhfs")
-cards = Array[ExtResource("2_sugp2")]([ExtResource("3_jyhfs"), SubResource("Resource_tbgi4")])
+cards = Array[ExtResource("2_sugp2")]([SubResource("Resource_trceg"), SubResource("Resource_tbgi4")])
 all_same_probpability = true
 appearances = 10
 metadata/_custom_type_script = "uid://cdxtyfw1ygdhm"
