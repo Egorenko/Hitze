@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="events" format=3 uid="uid://cftcmjmjdclqi"]
+
+[ext_resource type="Script" uid="uid://bgmvsmfyeqx25" path="res://scripts/events/events_base.gd" id="1_2af1a"]
+[ext_resource type="Script" uid="uid://ltae4meq4ly4" path="res://scripts/events/event_conditions/event_conditions.gd" id="1_bpby4"]
+[ext_resource type="Resource" uid="uid://betarkyiy3efg" path="res://scripts/stats_res/test_stats_heat1.tres" id="2_uqo3a"]
+[ext_resource type="Script" uid="uid://qlv7frdugxqg" path="res://scripts/events/event_effect/event_effect_toohot.gd" id="3_uqo3a"]
+
+[sub_resource type="Resource" id="Resource_bpby4"]
+script = ExtResource("1_bpby4")
+value = 100.0
+under = false
+stat = ExtResource("2_uqo3a")
+metadata/_custom_type_script = "uid://ltae4meq4ly4"
+
+[sub_resource type="Resource" id="Resource_yq6so"]
+script = ExtResource("3_uqo3a")
+metadata/_custom_type_script = "uid://qlv7frdugxqg"
+
+[resource]
+script = ExtResource("1_2af1a")
+name = "Heat max"
+condition = SubResource("Resource_bpby4")
+eff = SubResource("Resource_yq6so")
+metadata/_custom_type_script = "uid://bgmvsmfyeqx25"

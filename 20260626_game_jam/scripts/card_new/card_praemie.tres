@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="card_new" format=3 uid="uid://c2pqeoc6co524"]
+
+[ext_resource type="Script" uid="uid://beiy0k8bxs7cb" path="res://scripts/card_effect/card_effect.gd" id="1_ylker"]
+[ext_resource type="Script" uid="uid://b5e8fc5etbw2e" path="res://scripts/math_operators/math_sub.gd" id="2_mcrns"]
+[ext_resource type="Script" uid="uid://kqivetqsxq66" path="res://scripts/card_new/card_new.gd" id="2_o6ycv"]
+[ext_resource type="Resource" uid="uid://b8k7u7wupgxf5" path="res://scripts/stats_res/test_stats_hapiness1.tres" id="3_7w86n"]
+[ext_resource type="Resource" uid="uid://oe01m1ojxsvd" path="res://scripts/stats_res/test_stats_money1.tres" id="4_yr16l"]
+[ext_resource type="Script" uid="uid://dg235ouwyxe7y" path="res://scripts/math_operators/math_add.gd" id="6_x8wlx"]
+
+[sub_resource type="Resource" id="Resource_5molk"]
+script = ExtResource("2_mcrns")
+metadata/_custom_type_script = "uid://b5e8fc5etbw2e"
+
+[sub_resource type="Resource" id="Resource_x8wlx"]
+script = ExtResource("1_ylker")
+value = 5.0
+operation = SubResource("Resource_5molk")
+stat = ExtResource("3_7w86n")
+metadata/_custom_type_script = "uid://beiy0k8bxs7cb"
+
+[sub_resource type="Resource" id="Resource_hnl7l"]
+script = ExtResource("2_mcrns")
+metadata/_custom_type_script = "uid://b5e8fc5etbw2e"
+
+[sub_resource type="Resource" id="Resource_la7u1"]
+script = ExtResource("1_ylker")
+value = 5.0
+operation = SubResource("Resource_hnl7l")
+stat = ExtResource("4_yr16l")
+metadata/_custom_type_script = "uid://beiy0k8bxs7cb"
+
+[sub_resource type="Resource" id="Resource_rfk8y"]
+script = ExtResource("6_x8wlx")
+metadata/_custom_type_script = "uid://dg235ouwyxe7y"
+
+[sub_resource type="Resource" id="Resource_ny12e"]
+script = ExtResource("1_ylker")
+value = 10.0
+operation = SubResource("Resource_rfk8y")
+stat = ExtResource("4_yr16l")
+metadata/_custom_type_script = "uid://beiy0k8bxs7cb"
+
+[sub_resource type="Resource" id="Resource_e5udt"]
+script = ExtResource("2_mcrns")
+metadata/_custom_type_script = "uid://b5e8fc5etbw2e"
+
+[sub_resource type="Resource" id="Resource_mcrns"]
+script = ExtResource("1_ylker")
+value = 10.0
+operation = SubResource("Resource_e5udt")
+stat = ExtResource("3_7w86n")
+metadata/_custom_type_script = "uid://beiy0k8bxs7cb"
+
+[resource]
+script = ExtResource("2_o6ycv")
+name = "Beschluss über die Sondervergütung des Präsidenten"
+text = "Zur Abdeckung besonderer Aufwendungen im Amt wird dem Präsidenten eine einmalige Prämie in Höhe von 1.000.000 Geldeinheiten aus dem staatlichen Budget bewilligt."
+yes_effects = Array[ExtResource("1_ylker")]([SubResource("Resource_ny12e"), SubResource("Resource_mcrns")])
+no_effects = Array[ExtResource("1_ylker")]([SubResource("Resource_x8wlx"), SubResource("Resource_la7u1")])
+metadata/_custom_type_script = "uid://kqivetqsxq66"

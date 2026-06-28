@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bj07kdotnpmri"]
+
+[sub_resource type="SystemFont" id="SystemFont_h3w6p"]
+keep_rounding_remainders = false
+multichannel_signed_distance_field = true
+
+[sub_resource type="LabelSettings" id="LabelSettings_4ylyw"]
+font = SubResource("SystemFont_h3w6p")
+font_size = 50
+
+[node name="Node2D" type="Node2D" unique_id=504311503]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=943268872]
+offset_right = 1165.0
+offset_bottom = 657.0
+color = Color(0, 0, 0, 0.7764706)
+
+[node name="Label" type="Label" parent="." unique_id=61276356]
+offset_left = 129.0
+offset_top = 306.0
+offset_right = 1009.0
+offset_bottom = 384.0
+text = "Du hast verloren!"
+label_settings = SubResource("LabelSettings_4ylyw")
+horizontal_alignment = 1
