@@ -1,114 +1,263 @@
 [gd_scene format=3 uid="uid://clme6234ehbjq"]
 
 [ext_resource type="Script" uid="uid://bjc1ykksgn7pd" path="res://scenes/main.gd" id="1_o5qli"]
-[ext_resource type="Script" uid="uid://cdxtyfw1ygdhm" path="res://scripts/card_new/card_stack.gd" id="2_jyhfs"]
-[ext_resource type="Script" uid="uid://kqivetqsxq66" path="res://scripts/card_new/card_new.gd" id="2_sugp2"]
-[ext_resource type="Script" uid="uid://beiy0k8bxs7cb" path="res://scripts/card_effect/card_effect.gd" id="4_tefeu"]
-[ext_resource type="Script" uid="uid://b5e8fc5etbw2e" path="res://scripts/math_operators/math_sub.gd" id="5_85g3d"]
-[ext_resource type="Resource" uid="uid://b8k7u7wupgxf5" path="res://scripts/stats_res/test_stats_hapiness1.tres" id="5_choun"]
-[ext_resource type="PackedScene" uid="uid://8f5abqyd2juo" path="res://scenes/card_new.tscn" id="5_tbgi4"]
-[ext_resource type="Resource" uid="uid://betarkyiy3efg" path="res://scripts/stats_res/test_stats_heat1.tres" id="7_eb6dy"]
-[ext_resource type="Script" uid="uid://dg235ouwyxe7y" path="res://scripts/math_operators/math_add.gd" id="7_ya4ey"]
-[ext_resource type="Resource" uid="uid://oe01m1ojxsvd" path="res://scripts/stats_res/test_stats_money1.tres" id="8_choun"]
+[ext_resource type="Texture2D" uid="uid://dl0oevikbu1e0" path="res://assets/workspace_merz.png" id="2_0wfyh"]
+[ext_resource type="Texture2D" uid="uid://d0adyi2q1embe" path="res://assets/ui/ui_card_default.png" id="2_tbgi4"]
+[ext_resource type="Texture2D" uid="uid://cudnh5s6ye8fc" path="res://assets/floor_png.png" id="3_jscy8"]
+[ext_resource type="Texture2D" uid="uid://deonhomr6ga8" path="res://assets/flag_germany.png" id="3_y6deb"]
+[ext_resource type="Texture2D" uid="uid://cjvoblrku8mxa" path="res://assets/window_stage1_lost.png" id="3_ya4ey"]
+[ext_resource type="Texture2D" uid="uid://codthqtrfngkt" path="res://assets/background_brick_wall.png" id="3_yc10j"]
+[ext_resource type="Texture2D" uid="uid://brqpb46nchsjl" path="res://assets/window_stage2_mad.png" id="4_eb6dy"]
+[ext_resource type="Texture2D" uid="uid://caw6vdske146j" path="res://assets/ui/ui_agree_default.png" id="4_o6xl0"]
+[ext_resource type="Texture2D" uid="uid://c3rgyg6t858m4" path="res://assets/window_stage3_neutral.png" id="5_trceg"]
+[ext_resource type="Texture2D" uid="uid://bn5vt1uarbwy" path="res://assets/window_stage4_happy.png" id="6_a8y0u"]
+[ext_resource type="Texture2D" uid="uid://blvrub2asea0g" path="res://assets/window_stage5_win.png" id="7_jkv2x"]
+[ext_resource type="Texture2D" uid="uid://ch0biet64j5pn" path="res://assets/ui/ui_card_background.png" id="8_jbj1t"]
+[ext_resource type="Texture2D" uid="uid://cx77355fw1lde" path="res://assets/ui/ui_disagree_default.png" id="9_muem4"]
+[ext_resource type="Texture2D" uid="uid://dxbh1r2jkge5r" path="res://assets/ui/ui_money_icon.png" id="12_gqmmt"]
+[ext_resource type="Texture2D" uid="uid://cbnkyqxk7r3la" path="res://assets/whiteboard.png" id="13_pm3ni"]
+[ext_resource type="Texture2D" uid="uid://x3vj7472uo1b" path="res://assets/ui/statsbar_leer.png" id="13_yc10j"]
+[ext_resource type="Texture2D" uid="uid://8n8ic5ifd5j1" path="res://assets/ui/statsbar_1.png" id="14_jscy8"]
+[ext_resource type="Texture2D" uid="uid://b4c2pwyhpt3fl" path="res://assets/ui/statsbar_2.png" id="15_pm3ni"]
+[ext_resource type="Texture2D" uid="uid://d334vwxteln1n" path="res://assets/ui/statsbar_3.png" id="16_y6deb"]
+[ext_resource type="Texture2D" uid="uid://bvxq77trh8r3" path="res://assets/ui/statsbar_4.png" id="17_og1vs"]
+[ext_resource type="Texture2D" uid="uid://55cf8e6uk854" path="res://assets/ui/statsbar_5.png" id="18_2wyq8"]
+[ext_resource type="Texture2D" uid="uid://bh61j7mjtw72r" path="res://assets/ui/ui_mood_icon_2.png" id="19_vxglm"]
+[ext_resource type="Texture2D" uid="uid://dpbjmvfr5xt8y" path="res://assets/ui/ui_temperature_icon.png" id="20_2f3dj"]
+[ext_resource type="Texture2D" uid="uid://cgy4h14d5v1av" path="res://assets/certificate.png" id="25_og1vs"]
 
-[sub_resource type="Resource" id="Resource_3kn82"]
-script = ExtResource("5_85g3d")
-metadata/_custom_type_script = "uid://b5e8fc5etbw2e"
+[sub_resource type="SpriteFrames" id="SpriteFrames_gw5b5"]
+animations = [{
+"frames": [],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ya4ey")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_eb6dy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_trceg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_a8y0u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_jkv2x")
+}],
+"loop": 0,
+"name": &"window_lost",
+"speed": 0.0
+}]
 
-[sub_resource type="Resource" id="Resource_06f5i"]
-script = ExtResource("4_tefeu")
-value = 100.0
-operation = SubResource("Resource_3kn82")
-stat = ExtResource("5_choun")
-metadata/_custom_type_script = "uid://beiy0k8bxs7cb"
-
-[sub_resource type="Resource" id="Resource_gd07y"]
-script = ExtResource("7_ya4ey")
-metadata/_custom_type_script = "uid://dg235ouwyxe7y"
-
-[sub_resource type="Resource" id="Resource_oelue"]
-script = ExtResource("4_tefeu")
-value = 100.0
-operation = SubResource("Resource_gd07y")
-stat = ExtResource("7_eb6dy")
-metadata/_custom_type_script = "uid://beiy0k8bxs7cb"
-
-[sub_resource type="Resource" id="Resource_trceg"]
-script = ExtResource("2_sugp2")
-text = "y +100 he; n -100 ha"
-yes_effects = Array[ExtResource("4_tefeu")]([SubResource("Resource_oelue")])
-no_effects = Array[ExtResource("4_tefeu")]([SubResource("Resource_06f5i")])
-metadata/_custom_type_script = "uid://kqivetqsxq66"
-
-[sub_resource type="Resource" id="Resource_ya4ey"]
-script = ExtResource("5_85g3d")
-metadata/_custom_type_script = "uid://b5e8fc5etbw2e"
-
-[sub_resource type="Resource" id="Resource_choun"]
-script = ExtResource("4_tefeu")
-value = 1.0
-operation = SubResource("Resource_ya4ey")
-stat = ExtResource("8_choun")
-metadata/_custom_type_script = "uid://beiy0k8bxs7cb"
-
-[sub_resource type="Resource" id="Resource_o6xl0"]
-script = ExtResource("7_ya4ey")
-metadata/_custom_type_script = "uid://dg235ouwyxe7y"
-
-[sub_resource type="Resource" id="Resource_tefeu"]
-script = ExtResource("4_tefeu")
-value = 1.0
-operation = SubResource("Resource_o6xl0")
-stat = ExtResource("8_choun")
-metadata/_custom_type_script = "uid://beiy0k8bxs7cb"
-
-[sub_resource type="Resource" id="Resource_tbgi4"]
-script = ExtResource("2_sugp2")
-name = "/CardName2"
-yes_effects = Array[ExtResource("4_tefeu")]([SubResource("Resource_tefeu")])
-no_effects = Array[ExtResource("4_tefeu")]([SubResource("Resource_choun")])
-metadata/_custom_type_script = "uid://kqivetqsxq66"
-
-[sub_resource type="Resource" id="Resource_0wfyh"]
-script = ExtResource("2_jyhfs")
-cards = Array[ExtResource("2_sugp2")]([SubResource("Resource_trceg"), SubResource("Resource_tbgi4")])
-all_same_probpability = true
-appearances = 10
-metadata/_custom_type_script = "uid://cdxtyfw1ygdhm"
+[sub_resource type="SpriteFrames" id="SpriteFrames_akqkl"]
+animations = [{
+"frames": [],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_yc10j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_jscy8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_pm3ni")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_y6deb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_og1vs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_2wyq8")
+}],
+"loop": 1,
+"name": &"statsbars",
+"speed": 5.0
+}]
 
 [node name="main" type="Node2D" unique_id=1392902479]
+position = Vector2(0, -1)
 script = ExtResource("1_o5qli")
-all_cards = SubResource("Resource_0wfyh")
+
+[node name="background_wallpaper" type="Sprite2D" parent="." unique_id=1079388091]
+
+[node name="Sprite2D11" type="Sprite2D" parent="background_wallpaper" unique_id=15683826]
+position = Vector2(951.99994, 145)
+scale = Vector2(6.3139834, 6.3444915)
+texture = ExtResource("3_yc10j")
+
+[node name="Sprite2D9" type="Sprite2D" parent="background_wallpaper" unique_id=729930729]
+position = Vector2(4461.53, 1136.4293)
+scale = Vector2(39.866386, 40.25257)
+texture = ExtResource("3_yc10j")
+
+[node name="Sprite2D3" type="Sprite2D" parent="background_wallpaper" unique_id=772814376]
+position = Vector2(203.04749, 428.26776)
+scale = Vector2(6.3139834, 6.3444915)
+texture = ExtResource("3_yc10j")
+
+[node name="Sprite2D4" type="Sprite2D" parent="background_wallpaper" unique_id=1959862956]
+position = Vector2(607.0475, 428.26776)
+scale = Vector2(6.3139834, 6.3444915)
+texture = ExtResource("3_yc10j")
+
+[node name="Sprite2D5" type="Sprite2D" parent="background_wallpaper" unique_id=1436381923]
+position = Vector2(981.0475, 428.26776)
+scale = Vector2(6.3139834, 6.3444915)
+texture = ExtResource("3_yc10j")
+
+[node name="Sprite2D6" type="Sprite2D" parent="background_wallpaper" unique_id=592678302]
+position = Vector2(205.04749, 714.2678)
+scale = Vector2(6.3139834, 6.3444915)
+texture = ExtResource("3_yc10j")
+
+[node name="Sprite2D7" type="Sprite2D" parent="background_wallpaper" unique_id=1553527135]
+position = Vector2(584.0475, 714.26776)
+scale = Vector2(6.3139834, 6.3444915)
+texture = ExtResource("3_yc10j")
+
+[node name="Sprite2D8" type="Sprite2D" parent="background_wallpaper" unique_id=252245827]
+position = Vector2(969.0475, 714.26776)
+scale = Vector2(6.3139834, 6.3444915)
+texture = ExtResource("3_yc10j")
+
+[node name="Sprite2D10" type="Sprite2D" parent="background_wallpaper" unique_id=1205968426]
+position = Vector2(200.00012, 145)
+scale = Vector2(6.313983, 6.3444915)
+texture = ExtResource("3_yc10j")
+
+[node name="Sprite2D12" type="Sprite2D" parent="background_wallpaper" unique_id=1813593269]
+position = Vector2(552, 145)
+scale = Vector2(6.3139834, 6.3444915)
+texture = ExtResource("3_yc10j")
+
+[node name="floor" type="Sprite2D" parent="." unique_id=564277813]
+
+[node name="flag_germany" type="Sprite2D" parent="floor" unique_id=2047670497]
+position = Vector2(264, 137)
+scale = Vector2(3.9401038, 3.9401038)
+texture = ExtResource("3_y6deb")
+
+[node name="floor" type="Sprite2D" parent="floor" unique_id=1116236250]
+position = Vector2(174.66669, 561.00006)
+scale = Vector2(5.3750005, 5.3750005)
+texture = ExtResource("3_jscy8")
+
+[node name="florr2" type="Sprite2D" parent="floor" unique_id=1523459061]
+position = Vector2(518, 561.00006)
+scale = Vector2(5.3750005, 5.3750005)
+texture = ExtResource("3_jscy8")
+
+[node name="florr3" type="Sprite2D" parent="floor" unique_id=1906194535]
+position = Vector2(861.9999, 561.00006)
+scale = Vector2(5.3750005, 5.3750005)
+texture = ExtResource("3_jscy8")
+
+[node name="florr4" type="Sprite2D" parent="floor" unique_id=482205361]
+position = Vector2(1206.0001, 561)
+scale = Vector2(5.3750005, 5.3750005)
+texture = ExtResource("3_jscy8")
 
 [node name="Button" type="Button" parent="." unique_id=869369368]
-offset_left = 1050.0
-offset_top = 550.0
-offset_right = 1100.0
-offset_bottom = 600.0
+offset_left = 20.0
+offset_top = 33.0
+offset_right = 70.0
+offset_bottom = 83.0
+icon = ExtResource("2_tbgi4")
+icon_alignment = 1
+metadata/_edit_use_anchors_ = true
 
-[node name="LineMoney" type="Line2D" parent="." unique_id=2030511851]
-points = PackedVector2Array(38, 445, 34, 593)
+[node name="window_stage3_neutral" type="AnimatedSprite2D" parent="." unique_id=1675106314]
+position = Vector2(848, 289)
+scale = Vector2(4.543241, 4.543241)
+sprite_frames = SubResource("SpriteFrames_gw5b5")
+animation = &"window_lost"
 
-[node name="LineHeat" type="Line2D" parent="." unique_id=1811252029]
-points = PackedVector2Array(43, 237, 36, 370)
-
-[node name="LineHappiines" type="Line2D" parent="." unique_id=1537679031]
-points = PackedVector2Array(43, 37, 41, 162)
+[node name="design_card_background" type="Sprite2D" parent="." unique_id=1355495405]
+position = Vector2(264.00003, 145)
+scale = Vector2(5.677083, 5.677083)
+texture = ExtResource("8_jbj1t")
 
 [node name="ButtonNo" type="Button" parent="." unique_id=1229762272]
-offset_left = 111.0
-offset_top = 564.0
-offset_right = 306.0
-offset_bottom = 617.0
+offset_left = 280.0
+offset_top = 193.0
+offset_right = 414.0
+offset_bottom = 247.0
+icon = ExtResource("9_muem4")
+icon_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="ButtonYes" type="Button" parent="." unique_id=1407809579]
-offset_left = 630.0
-offset_top = 562.0
-offset_right = 846.0
-offset_bottom = 609.0
+offset_left = 120.0
+offset_top = 193.0
+offset_right = 254.0
+offset_bottom = 245.0
+icon = ExtResource("4_o6xl0")
+icon_alignment = 1
+metadata/_edit_use_anchors_ = true
 
-[node name="Card" parent="." unique_id=2126844789 instance=ExtResource("5_tbgi4")]
+[node name="whiteboard" type="Sprite2D" parent="." unique_id=1627519367]
+position = Vector2(360, 441.00003)
+scale = Vector2(6, 6)
+texture = ExtResource("13_pm3ni")
+
+[node name="design_workspace_merz" type="Sprite2D" parent="." unique_id=1335560741]
+position = Vector2(138.73256, 512.2674)
+scale = Vector2(4.258357, 4.258357)
+texture = ExtResource("2_0wfyh")
+
+[node name="icon_money" type="Sprite2D" parent="." unique_id=188063717]
+position = Vector2(320, 350)
+scale = Vector2(1.6874986, 1.6874986)
+texture = ExtResource("12_gqmmt")
+
+[node name="statsbar_money" type="AnimatedSprite2D" parent="." unique_id=290042612]
+position = Vector2(455, 350)
+scale = Vector2(4.9970894, 4.9970894)
+sprite_frames = SubResource("SpriteFrames_akqkl")
+animation = &"statsbars"
+frame = 3
+frame_progress = 0.56883484
+
+[node name="icon_mood" type="Sprite2D" parent="." unique_id=1329389843]
+position = Vector2(320, 440)
+scale = Vector2(1.71875, 1.71875)
+texture = ExtResource("19_vxglm")
+
+[node name="statsbar_mood" type="AnimatedSprite2D" parent="." unique_id=30343103]
+position = Vector2(455, 440)
+scale = Vector2(4.9970894, 4.9970894)
+sprite_frames = SubResource("SpriteFrames_akqkl")
+animation = &"statsbars"
+frame = 3
+frame_progress = 0.56883484
+
+[node name="icon_temperature" type="Sprite2D" parent="." unique_id=869745420]
+position = Vector2(320, 530)
+scale = Vector2(1.7499998, 1.7499998)
+texture = ExtResource("20_2f3dj")
+
+[node name="statsbar_temperature" type="AnimatedSprite2D" parent="." unique_id=181762736]
+position = Vector2(455, 530)
+scale = Vector2(4.9970894, 4.9970894)
+sprite_frames = SubResource("SpriteFrames_akqkl")
+animation = &"statsbars"
+frame = 3
+frame_progress = 0.56883484
+
+[node name="certificate" type="Sprite2D" parent="." unique_id=449274665]
+position = Vector2(160, 385)
+scale = Vector2(2.3333333, 2.3333333)
+texture = ExtResource("25_og1vs")
 
 [connection signal="button_down" from="Button" to="." method="spawn_card"]
-[connection signal="button_down" from="ButtonNo" to="." method="_on_button_no_button_down"]
-[connection signal="button_down" from="ButtonYes" to="." method="_on_button_yes_button_down"]

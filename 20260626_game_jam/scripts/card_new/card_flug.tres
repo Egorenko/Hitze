@@ -1,0 +1,61 @@
+[gd_resource type="Resource" script_class="card_new" format=3 uid="uid://bpx6mbhwaybkf"]
+
+[ext_resource type="Script" uid="uid://beiy0k8bxs7cb" path="res://scripts/card_effect/card_effect.gd" id="1_oajoh"]
+[ext_resource type="Script" uid="uid://kqivetqsxq66" path="res://scripts/card_new/card_new.gd" id="2_mhxg2"]
+[ext_resource type="Script" uid="uid://b5e8fc5etbw2e" path="res://scripts/math_operators/math_sub.gd" id="2_u6x0a"]
+[ext_resource type="Resource" uid="uid://betarkyiy3efg" path="res://scripts/stats_res/test_stats_heat1.tres" id="3_u6x0a"]
+[ext_resource type="Resource" uid="uid://oe01m1ojxsvd" path="res://scripts/stats_res/test_stats_money1.tres" id="5_55db8"]
+[ext_resource type="Resource" uid="uid://b8k7u7wupgxf5" path="res://scripts/stats_res/test_stats_hapiness1.tres" id="6_tpeko"]
+[ext_resource type="Script" uid="uid://dg235ouwyxe7y" path="res://scripts/math_operators/math_add.gd" id="7_sojci"]
+
+[sub_resource type="Resource" id="Resource_fg8af"]
+script = ExtResource("2_u6x0a")
+metadata/_custom_type_script = "uid://b5e8fc5etbw2e"
+
+[sub_resource type="Resource" id="Resource_o32q5"]
+script = ExtResource("1_oajoh")
+value = 5.0
+operation = SubResource("Resource_fg8af")
+stat = ExtResource("3_u6x0a")
+metadata/_custom_type_script = "uid://beiy0k8bxs7cb"
+
+[sub_resource type="Resource" id="Resource_g6gta"]
+script = ExtResource("2_u6x0a")
+metadata/_custom_type_script = "uid://b5e8fc5etbw2e"
+
+[sub_resource type="Resource" id="Resource_fpa4i"]
+script = ExtResource("1_oajoh")
+value = 20.0
+operation = SubResource("Resource_g6gta")
+stat = ExtResource("5_55db8")
+metadata/_custom_type_script = "uid://beiy0k8bxs7cb"
+
+[sub_resource type="Resource" id="Resource_55db8"]
+script = ExtResource("2_u6x0a")
+metadata/_custom_type_script = "uid://b5e8fc5etbw2e"
+
+[sub_resource type="Resource" id="Resource_u6x0a"]
+script = ExtResource("1_oajoh")
+value = 10.0
+operation = SubResource("Resource_55db8")
+stat = ExtResource("6_tpeko")
+metadata/_custom_type_script = "uid://beiy0k8bxs7cb"
+
+[sub_resource type="Resource" id="Resource_sojci"]
+script = ExtResource("7_sojci")
+metadata/_custom_type_script = "uid://dg235ouwyxe7y"
+
+[sub_resource type="Resource" id="Resource_cwaq0"]
+script = ExtResource("1_oajoh")
+value = 10.0
+operation = SubResource("Resource_sojci")
+stat = ExtResource("3_u6x0a")
+metadata/_custom_type_script = "uid://beiy0k8bxs7cb"
+
+[resource]
+script = ExtResource("2_mhxg2")
+name = "Verordnung über das Verbot von Kurzstreckenflügen im Inland"
+text = "Zur gezielten Senkung der CO2-Emissionen wird die Durchführung sämtlicher kommerzieller Inlandsflüge mit sofortiger Wirkung untersagt. Die Mobilität ist fortan vorrangig über das nationale Schienennetz zu gewährleisten."
+yes_effects = Array[ExtResource("1_oajoh")]([SubResource("Resource_fpa4i"), SubResource("Resource_u6x0a"), SubResource("Resource_cwaq0")])
+no_effects = Array[ExtResource("1_oajoh")]([SubResource("Resource_o32q5")])
+metadata/_custom_type_script = "uid://kqivetqsxq66"
