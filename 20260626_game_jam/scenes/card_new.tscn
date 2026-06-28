@@ -13,6 +13,7 @@ offset_left = -63.0
 offset_top = -142.0
 offset_right = 68.0
 offset_bottom = -119.0
+text = "/titel"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -22,5 +23,6 @@ offset_left = -67.0
 offset_top = -69.0
 offset_right = 67.0
 offset_bottom = 140.0
+text = "/text"
 autowrap_mode = 3
 text_overrun_behavior = 2

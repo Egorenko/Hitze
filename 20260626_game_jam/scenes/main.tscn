@@ -248,6 +248,7 @@ scale = Vector2(2.3333333, 2.3333333)
 texture = ExtResource("25_og1vs")
 
 [node name="Card" parent="." unique_id=2126844789 instance=ExtResource("5_tbgi4")]
+position = Vector2(264, 180)
 
 [node name="stat_bars" type="Node2D" parent="." unique_id=662663315]
 
