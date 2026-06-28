@@ -1,7 +1,7 @@
 class_name stats_heat extends stats
 
 func on_min() -> void:
-	print("burn")
+	print("///burn///")
 
 func on_max() -> void:
-	print("too cold?")
+	print("///too cold?///")

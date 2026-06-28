@@ -97,6 +97,9 @@ func _input(event: InputEvent) -> void:
 			print(el.name, " + ", el.amount)
 	if event.is_action_pressed("ui_up"):
 		print(card_pos)
+	if event.is_action_pressed("ui_left"):
+		for el in PlayerManager.stat:
+			print(el.cur)
 
 
 func on_win() -> void:

@@ -1,0 +1,72 @@
+[gd_resource type="Resource" script_class="card_new" format=3 uid="uid://koq35jkfcj0r"]
+
+[ext_resource type="Script" uid="uid://beiy0k8bxs7cb" path="res://scripts/card_effect/card_effect.gd" id="1_sducc"]
+[ext_resource type="Script" uid="uid://b5e8fc5etbw2e" path="res://scripts/math_operators/math_sub.gd" id="2_7bud6"]
+[ext_resource type="Script" uid="uid://kqivetqsxq66" path="res://scripts/card_new/card_new.gd" id="2_51how"]
+[ext_resource type="Script" uid="uid://dg235ouwyxe7y" path="res://scripts/math_operators/math_add.gd" id="6_owbi6"]
+[ext_resource type="Resource" uid="uid://oe01m1ojxsvd" path="res://scripts/stats_res/test_stats_money1.tres" id="7_634ek"]
+[ext_resource type="Resource" uid="uid://b8k7u7wupgxf5" path="res://scripts/stats_res/test_stats_hapiness1.tres" id="8_owbi6"]
+[ext_resource type="Resource" uid="uid://betarkyiy3efg" path="res://scripts/stats_res/test_stats_heat1.tres" id="9_jr7i5"]
+
+[sub_resource type="Resource" id="Resource_idg1t"]
+script = ExtResource("2_7bud6")
+metadata/_custom_type_script = "uid://b5e8fc5etbw2e"
+
+[sub_resource type="Resource" id="Resource_0xruj"]
+script = ExtResource("1_sducc")
+value = 5.0
+operation = SubResource("Resource_idg1t")
+stat = ExtResource("8_owbi6")
+metadata/_custom_type_script = "uid://beiy0k8bxs7cb"
+
+[sub_resource type="Resource" id="Resource_46exo"]
+script = ExtResource("2_7bud6")
+metadata/_custom_type_script = "uid://b5e8fc5etbw2e"
+
+[sub_resource type="Resource" id="Resource_hwcl6"]
+script = ExtResource("1_sducc")
+value = 5.0
+operation = SubResource("Resource_46exo")
+stat = ExtResource("7_634ek")
+metadata/_custom_type_script = "uid://beiy0k8bxs7cb"
+
+[sub_resource type="Resource" id="Resource_32we6"]
+script = ExtResource("6_owbi6")
+metadata/_custom_type_script = "uid://dg235ouwyxe7y"
+
+[sub_resource type="Resource" id="Resource_514wt"]
+script = ExtResource("1_sducc")
+value = 10.0
+operation = SubResource("Resource_32we6")
+stat = ExtResource("7_634ek")
+metadata/_custom_type_script = "uid://beiy0k8bxs7cb"
+
+[sub_resource type="Resource" id="Resource_q3kga"]
+script = ExtResource("6_owbi6")
+metadata/_custom_type_script = "uid://dg235ouwyxe7y"
+
+[sub_resource type="Resource" id="Resource_7bud6"]
+script = ExtResource("1_sducc")
+value = 10.0
+operation = SubResource("Resource_q3kga")
+stat = ExtResource("8_owbi6")
+metadata/_custom_type_script = "uid://beiy0k8bxs7cb"
+
+[sub_resource type="Resource" id="Resource_jr7i5"]
+script = ExtResource("2_7bud6")
+metadata/_custom_type_script = "uid://b5e8fc5etbw2e"
+
+[sub_resource type="Resource" id="Resource_owbi6"]
+script = ExtResource("1_sducc")
+value = 10.0
+operation = SubResource("Resource_jr7i5")
+stat = ExtResource("9_jr7i5")
+metadata/_custom_type_script = "uid://beiy0k8bxs7cb"
+
+[resource]
+script = ExtResource("2_51how")
+name = "Verordnung zur Erweiterung der Agrarflächen"
+text = "Zur Steigerung der landwirtschaftlichen Produktivität und zur Sicherung der nationalen Versorgung wird die Umwandlung von geschützten Naturgebieten in landwirtschaftliche Nutzflächen beschlossen."
+yes_effects = Array[ExtResource("1_sducc")]([SubResource("Resource_514wt"), SubResource("Resource_7bud6"), SubResource("Resource_owbi6")])
+no_effects = Array[ExtResource("1_sducc")]([SubResource("Resource_0xruj"), SubResource("Resource_hwcl6")])
+metadata/_custom_type_script = "uid://kqivetqsxq66"

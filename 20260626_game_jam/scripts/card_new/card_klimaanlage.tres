@@ -1,0 +1,61 @@
+[gd_resource type="Resource" script_class="card_new" format=3 uid="uid://bh755hgx0idgs"]
+
+[ext_resource type="Script" uid="uid://beiy0k8bxs7cb" path="res://scripts/card_effect/card_effect.gd" id="1_duf8w"]
+[ext_resource type="Script" uid="uid://b5e8fc5etbw2e" path="res://scripts/math_operators/math_sub.gd" id="2_57pkr"]
+[ext_resource type="Script" uid="uid://kqivetqsxq66" path="res://scripts/card_new/card_new.gd" id="2_qorqv"]
+[ext_resource type="Resource" uid="uid://b8k7u7wupgxf5" path="res://scripts/stats_res/test_stats_hapiness1.tres" id="3_57pkr"]
+[ext_resource type="Resource" uid="uid://oe01m1ojxsvd" path="res://scripts/stats_res/test_stats_money1.tres" id="5_riqll"]
+[ext_resource type="Script" uid="uid://dg235ouwyxe7y" path="res://scripts/math_operators/math_add.gd" id="6_1435s"]
+[ext_resource type="Resource" uid="uid://betarkyiy3efg" path="res://scripts/stats_res/test_stats_heat1.tres" id="7_ge43e"]
+
+[sub_resource type="Resource" id="Resource_p8k1d"]
+script = ExtResource("2_57pkr")
+metadata/_custom_type_script = "uid://b5e8fc5etbw2e"
+
+[sub_resource type="Resource" id="Resource_mwen5"]
+script = ExtResource("1_duf8w")
+value = 5.0
+operation = SubResource("Resource_p8k1d")
+stat = ExtResource("3_57pkr")
+metadata/_custom_type_script = "uid://beiy0k8bxs7cb"
+
+[sub_resource type="Resource" id="Resource_8dv4u"]
+script = ExtResource("2_57pkr")
+metadata/_custom_type_script = "uid://b5e8fc5etbw2e"
+
+[sub_resource type="Resource" id="Resource_n8auj"]
+script = ExtResource("1_duf8w")
+value = 10.0
+operation = SubResource("Resource_8dv4u")
+stat = ExtResource("5_riqll")
+metadata/_custom_type_script = "uid://beiy0k8bxs7cb"
+
+[sub_resource type="Resource" id="Resource_riqll"]
+script = ExtResource("6_1435s")
+metadata/_custom_type_script = "uid://dg235ouwyxe7y"
+
+[sub_resource type="Resource" id="Resource_57pkr"]
+script = ExtResource("1_duf8w")
+value = 20.0
+operation = SubResource("Resource_riqll")
+stat = ExtResource("3_57pkr")
+metadata/_custom_type_script = "uid://beiy0k8bxs7cb"
+
+[sub_resource type="Resource" id="Resource_7h1rk"]
+script = ExtResource("2_57pkr")
+metadata/_custom_type_script = "uid://b5e8fc5etbw2e"
+
+[sub_resource type="Resource" id="Resource_1435s"]
+script = ExtResource("1_duf8w")
+value = 10.0
+operation = SubResource("Resource_7h1rk")
+stat = ExtResource("7_ge43e")
+metadata/_custom_type_script = "uid://beiy0k8bxs7cb"
+
+[resource]
+script = ExtResource("2_qorqv")
+name = "Richtlinie zur staatlichen Bezuschussung von Raumkühlungsanlagen"
+text = "Zur Gewährleistung des Gesundheitsschutzes und der Arbeitseffizienz bei extremen Wetterlagen wird ein Förderprogramm für die Anschaffung mobiler und stationärer Klimaanlagen in öffentlichen und privaten Einrichtungen beschlossen."
+yes_effects = Array[ExtResource("1_duf8w")]([SubResource("Resource_n8auj"), SubResource("Resource_57pkr"), SubResource("Resource_1435s")])
+no_effects = Array[ExtResource("1_duf8w")]([SubResource("Resource_mwen5")])
+metadata/_custom_type_script = "uid://kqivetqsxq66"

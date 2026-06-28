@@ -13,10 +13,12 @@ var cur:float = start
 
 func update() -> void:
 	if cur <= min:
+		cur = min
 		on_min()
 		return
 	
 	if cur >= max:
+		cur = max
 		on_max()
 		return
 
