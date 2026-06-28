@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://codthqtrfngkt" path="res://assets/background_brick_wall.png" id="3_yc10j"]
 [ext_resource type="Texture2D" uid="uid://brqpb46nchsjl" path="res://assets/window_stage2_mad.png" id="4_eb6dy"]
 [ext_resource type="Texture2D" uid="uid://caw6vdske146j" path="res://assets/ui/ui_agree_default.png" id="4_o6xl0"]
+[ext_resource type="PackedScene" uid="uid://8f5abqyd2juo" path="res://scenes/card_new.tscn" id="5_tbgi4"]
 [ext_resource type="Texture2D" uid="uid://c3rgyg6t858m4" path="res://assets/window_stage3_neutral.png" id="5_trceg"]
 [ext_resource type="Texture2D" uid="uid://bn5vt1uarbwy" path="res://assets/window_stage4_happy.png" id="6_a8y0u"]
 [ext_resource type="Texture2D" uid="uid://blvrub2asea0g" path="res://assets/window_stage5_win.png" id="7_jkv2x"]
@@ -259,5 +260,7 @@ frame_progress = 0.56883484
 position = Vector2(160, 385)
 scale = Vector2(2.3333333, 2.3333333)
 texture = ExtResource("25_og1vs")
+
+[node name="Card" parent="." unique_id=2126844789 instance=ExtResource("5_tbgi4")]
 
 [connection signal="button_down" from="Button" to="." method="spawn_card"]

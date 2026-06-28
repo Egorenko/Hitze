@@ -6,6 +6,10 @@ preload("res://scripts/stats_res/test_stats_heat1.tres"),
 preload("res://scripts/stats_res/test_stats_money1.tres")
 ]
 
+var event:Array[events] = [
+
+]
+
 func on_lose() -> void:
 	#load and overlay lose_screen
 	pass
