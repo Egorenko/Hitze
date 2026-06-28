@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="event_conditions" format=3 uid="uid://cwrex1f2jlob4"]
+
+[ext_resource type="Script" uid="uid://ltae4meq4ly4" path="res://scripts/events/event_conditions/event_conditions.gd" id="1_n1mjf"]
+[ext_resource type="Resource" uid="uid://b8k7u7wupgxf5" path="res://scripts/stats_res/test_stats_hapiness1.tres" id="2_n1mjf"]
+
+[resource]
+script = ExtResource("1_n1mjf")
+value = 0.1
+stat = ExtResource("2_n1mjf")
+metadata/_custom_type_script = "uid://ltae4meq4ly4"

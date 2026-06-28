@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="events" format=3 uid="uid://d0tps34amgwyg"]
+
+[ext_resource type="Script" uid="uid://bgmvsmfyeqx25" path="res://scripts/events/events_base.gd" id="1_d0yfv"]
+[ext_resource type="Resource" uid="uid://cwrex1f2jlob4" path="res://scripts/events/event_conditions/cond_happines_0.tres" id="1_tbww3"]
+[ext_resource type="Script" uid="uid://cwve6p3oc6b8s" path="res://scripts/events/event_effect/event_eff_lose.gd" id="2_h2hmr"]
+[ext_resource type="Texture2D" uid="uid://cjvoblrku8mxa" path="res://assets/window_stage1_lost.png" id="4_tcvq4"]
+
+[sub_resource type="Resource" id="Resource_4bvu2"]
+script = ExtResource("2_h2hmr")
+metadata/_custom_type_script = "uid://cwve6p3oc6b8s"
+
+[resource]
+script = ExtResource("1_d0yfv")
+name = "Happiness is 0"
+window = ExtResource("4_tcvq4")
+condition = ExtResource("1_tbww3")
+eff = SubResource("Resource_4bvu2")
+metadata/_custom_type_script = "uid://bgmvsmfyeqx25"

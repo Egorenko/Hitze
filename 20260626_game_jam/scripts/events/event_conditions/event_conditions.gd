@@ -8,7 +8,8 @@ class_name event_conditions extends Resource
 func check() -> bool:
 	if stat:
 		for el in PlayerManager.stat:
-			if el == stat:
+			#don't like names
+			if el.name == stat.name:
 				if under:
 					return el.cur < value
 				else:

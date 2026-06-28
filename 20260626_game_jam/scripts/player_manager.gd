@@ -7,7 +7,7 @@ preload("res://scripts/stats_res/test_stats_money1.tres")
 ]
 
 var event:Array[events] = [
-
+preload("res://scripts/events/events_res/event_happines_0.tres")
 ]
 
 func on_lose() -> void:

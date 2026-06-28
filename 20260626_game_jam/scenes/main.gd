@@ -93,7 +93,8 @@ func update_stats() -> void:
 	money.frame = int(PlayerManager.stat[2].cur / 16.6)
 	happines.frame = int(PlayerManager.stat[0].cur / 16.6)
 	heat.frame = int(PlayerManager.stat[1].cur / 16.6)
-	pass
+	for event in PlayerManager.event:
+		event.activate()
 #
 func _on_card_played(direction: String) -> void:
 	card_on_feld = false
