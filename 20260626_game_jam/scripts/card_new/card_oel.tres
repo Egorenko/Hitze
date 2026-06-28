@@ -1,0 +1,72 @@
+[gd_resource type="Resource" script_class="card_new" format=3 uid="uid://dav30en6f64ku"]
+
+[ext_resource type="Script" uid="uid://beiy0k8bxs7cb" path="res://scripts/card_effect/card_effect.gd" id="1_qvfvx"]
+[ext_resource type="Script" uid="uid://kqivetqsxq66" path="res://scripts/card_new/card_new.gd" id="2_hc12a"]
+[ext_resource type="Script" uid="uid://b5e8fc5etbw2e" path="res://scripts/math_operators/math_sub.gd" id="2_w3eip"]
+[ext_resource type="Resource" uid="uid://b8k7u7wupgxf5" path="res://scripts/stats_res/test_stats_hapiness1.tres" id="3_w3eip"]
+[ext_resource type="Resource" uid="uid://oe01m1ojxsvd" path="res://scripts/stats_res/test_stats_money1.tres" id="4_yjhrn"]
+[ext_resource type="Script" uid="uid://dg235ouwyxe7y" path="res://scripts/math_operators/math_add.gd" id="6_dvgof"]
+[ext_resource type="Resource" uid="uid://betarkyiy3efg" path="res://scripts/stats_res/test_stats_heat1.tres" id="7_q1k0l"]
+
+[sub_resource type="Resource" id="Resource_ossev"]
+script = ExtResource("2_w3eip")
+metadata/_custom_type_script = "uid://b5e8fc5etbw2e"
+
+[sub_resource type="Resource" id="Resource_1hsvh"]
+script = ExtResource("1_qvfvx")
+value = 10.0
+operation = SubResource("Resource_ossev")
+stat = ExtResource("3_w3eip")
+metadata/_custom_type_script = "uid://beiy0k8bxs7cb"
+
+[sub_resource type="Resource" id="Resource_m023u"]
+script = ExtResource("2_w3eip")
+metadata/_custom_type_script = "uid://b5e8fc5etbw2e"
+
+[sub_resource type="Resource" id="Resource_ri2g1"]
+script = ExtResource("1_qvfvx")
+value = 5.0
+operation = SubResource("Resource_m023u")
+stat = ExtResource("4_yjhrn")
+metadata/_custom_type_script = "uid://beiy0k8bxs7cb"
+
+[sub_resource type="Resource" id="Resource_utc1o"]
+script = ExtResource("6_dvgof")
+metadata/_custom_type_script = "uid://dg235ouwyxe7y"
+
+[sub_resource type="Resource" id="Resource_f7emb"]
+script = ExtResource("1_qvfvx")
+value = 20.0
+operation = SubResource("Resource_utc1o")
+stat = ExtResource("4_yjhrn")
+metadata/_custom_type_script = "uid://beiy0k8bxs7cb"
+
+[sub_resource type="Resource" id="Resource_yjhrn"]
+script = ExtResource("6_dvgof")
+metadata/_custom_type_script = "uid://dg235ouwyxe7y"
+
+[sub_resource type="Resource" id="Resource_w3eip"]
+script = ExtResource("1_qvfvx")
+value = 10.0
+operation = SubResource("Resource_yjhrn")
+stat = ExtResource("3_w3eip")
+metadata/_custom_type_script = "uid://beiy0k8bxs7cb"
+
+[sub_resource type="Resource" id="Resource_nhjiq"]
+script = ExtResource("2_w3eip")
+metadata/_custom_type_script = "uid://b5e8fc5etbw2e"
+
+[sub_resource type="Resource" id="Resource_dvgof"]
+script = ExtResource("1_qvfvx")
+value = 20.0
+operation = SubResource("Resource_nhjiq")
+stat = ExtResource("7_q1k0l")
+metadata/_custom_type_script = "uid://beiy0k8bxs7cb"
+
+[resource]
+script = ExtResource("2_hc12a")
+name = "Beschluss zur Erschließung und Förderung nationaler Kohlenwasserstoffvorkommen"
+text = "Zur Stärkung der wirtschaftlichen Unabhängigkeit und zur Maximierung der staatlichen Einnahmen wird die sofortige Freigabe und industrielle Ausbeutung der neu entdeckten Erdöllagerstätten auf dem Staatsgebiet beschlossen."
+yes_effects = Array[ExtResource("1_qvfvx")]([SubResource("Resource_f7emb"), SubResource("Resource_w3eip"), SubResource("Resource_dvgof")])
+no_effects = Array[ExtResource("1_qvfvx")]([SubResource("Resource_1hsvh"), SubResource("Resource_ri2g1")])
+metadata/_custom_type_script = "uid://kqivetqsxq66"
