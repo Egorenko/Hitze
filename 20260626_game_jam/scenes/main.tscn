@@ -274,7 +274,7 @@ region = Rect2(2752, 0, 64, 64)
 [sub_resource type="SpriteFrames" id="SpriteFrames_8wx7q"]
 animations = [{
 "frames": [{
-"duration": 30.0,
+"duration": 10.0,
 "texture": SubResource("AtlasTexture_vxglm")
 }, {
 "duration": 1.0,
@@ -286,19 +286,19 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_fv21b")
 }, {
-"duration": 30.0,
+"duration": 10.0,
 "texture": SubResource("AtlasTexture_tel4y")
 }, {
-"duration": 30.0,
+"duration": 10.0,
 "texture": SubResource("AtlasTexture_qkpxi")
 }, {
-"duration": 20.0,
+"duration": 5.0,
 "texture": SubResource("AtlasTexture_5q0nq")
 }, {
-"duration": 30.0,
+"duration": 10.0,
 "texture": SubResource("AtlasTexture_dgi5k")
 }, {
-"duration": 20.0,
+"duration": 5.0,
 "texture": SubResource("AtlasTexture_j8jky")
 }, {
 "duration": 1.0,
@@ -316,10 +316,10 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_5he1u")
 }, {
-"duration": 30.0,
+"duration": 10.0,
 "texture": SubResource("AtlasTexture_5poiv")
 }, {
-"duration": 10.0,
+"duration": 5.0,
 "texture": SubResource("AtlasTexture_2cjbq")
 }, {
 "duration": 1.0,
@@ -343,7 +343,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ty1g6")
 }, {
-"duration": 30.0,
+"duration": 10.0,
 "texture": SubResource("AtlasTexture_j2jfr")
 }, {
 "duration": 1.0,
@@ -355,7 +355,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_o7ddy")
 }, {
-"duration": 30.0,
+"duration": 10.0,
 "texture": SubResource("AtlasTexture_0loja")
 }, {
 "duration": 1.0,
