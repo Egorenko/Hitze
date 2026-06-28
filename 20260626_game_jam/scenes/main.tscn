@@ -138,8 +138,25 @@ position = Vector2(552, 145)
 scale = Vector2(6.3139834, 6.3444915)
 texture = ExtResource("3_yc10j")
 
-[node name="florr" type="Sprite2D" parent="." unique_id=1116236250]
+[node name="floor" type="Sprite2D" parent="." unique_id=564277813]
+
+[node name="floor" type="Sprite2D" parent="floor" unique_id=1116236250]
 position = Vector2(174.66669, 530)
+scale = Vector2(5.3750005, 5.3750005)
+texture = ExtResource("3_jscy8")
+
+[node name="florr2" type="Sprite2D" parent="floor" unique_id=1523459061]
+position = Vector2(519, 530.00006)
+scale = Vector2(5.3750005, 5.3750005)
+texture = ExtResource("3_jscy8")
+
+[node name="florr3" type="Sprite2D" parent="floor" unique_id=1906194535]
+position = Vector2(862.99994, 530)
+scale = Vector2(5.3750005, 5.3750005)
+texture = ExtResource("3_jscy8")
+
+[node name="florr4" type="Sprite2D" parent="floor" unique_id=482205361]
+position = Vector2(1207, 530)
 scale = Vector2(5.3750005, 5.3750005)
 texture = ExtResource("3_jscy8")
 
@@ -236,20 +253,5 @@ sprite_frames = SubResource("SpriteFrames_akqkl")
 animation = &"statsbars"
 frame = 3
 frame_progress = 0.56883484
-
-[node name="florr2" type="Sprite2D" parent="." unique_id=1523459061]
-position = Vector2(519, 530.00006)
-scale = Vector2(5.3750005, 5.3750005)
-texture = ExtResource("3_jscy8")
-
-[node name="florr3" type="Sprite2D" parent="." unique_id=1906194535]
-position = Vector2(862.99994, 530)
-scale = Vector2(5.3750005, 5.3750005)
-texture = ExtResource("3_jscy8")
-
-[node name="florr4" type="Sprite2D" parent="." unique_id=482205361]
-position = Vector2(1207, 530)
-scale = Vector2(5.3750005, 5.3750005)
-texture = ExtResource("3_jscy8")
 
 [connection signal="button_down" from="Button" to="." method="spawn_card"]
