@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="card_new" format=3 uid="uid://cw0xjxlgmq5er"]
+
+[ext_resource type="Script" uid="uid://beiy0k8bxs7cb" path="res://scripts/card_effect/card_effect.gd" id="1_fbfkh"]
+[ext_resource type="Script" uid="uid://b5e8fc5etbw2e" path="res://scripts/math_operators/math_sub.gd" id="2_7lw02"]
+[ext_resource type="Script" uid="uid://kqivetqsxq66" path="res://scripts/card_new/card_new.gd" id="2_qpk4h"]
+[ext_resource type="Resource" uid="uid://oe01m1ojxsvd" path="res://scripts/stats_res/test_stats_money1.tres" id="3_2gqbr"]
+[ext_resource type="Script" uid="uid://dg235ouwyxe7y" path="res://scripts/math_operators/math_add.gd" id="5_jhbsu"]
+[ext_resource type="Resource" uid="uid://betarkyiy3efg" path="res://scripts/stats_res/test_stats_heat1.tres" id="6_5i7ub"]
+
+[sub_resource type="Resource" id="Resource_5i7ub"]
+script = ExtResource("2_7lw02")
+metadata/_custom_type_script = "uid://b5e8fc5etbw2e"
+
+[sub_resource type="Resource" id="Resource_jhbsu"]
+script = ExtResource("1_fbfkh")
+value = 1.0
+operation = SubResource("Resource_5i7ub")
+stat = ExtResource("3_2gqbr")
+metadata/_custom_type_script = "uid://beiy0k8bxs7cb"
+
+[sub_resource type="Resource" id="Resource_7r3ai"]
+script = ExtResource("5_jhbsu")
+metadata/_custom_type_script = "uid://dg235ouwyxe7y"
+
+[sub_resource type="Resource" id="Resource_b7jsy"]
+script = ExtResource("1_fbfkh")
+value = 10.0
+operation = SubResource("Resource_7r3ai")
+stat = ExtResource("3_2gqbr")
+metadata/_custom_type_script = "uid://beiy0k8bxs7cb"
+
+[sub_resource type="Resource" id="Resource_2gqbr"]
+script = ExtResource("2_7lw02")
+metadata/_custom_type_script = "uid://b5e8fc5etbw2e"
+
+[sub_resource type="Resource" id="Resource_7lw02"]
+script = ExtResource("1_fbfkh")
+value = 10.0
+operation = SubResource("Resource_2gqbr")
+stat = ExtResource("6_5i7ub")
+metadata/_custom_type_script = "uid://beiy0k8bxs7cb"
+
+[resource]
+script = ExtResource("2_qpk4h")
+name = "Verordnung zur zeitlichen Nutzungsbeschränkung von Kraftfahrzeugen nach Endziffern"
+text = "Zur Reduzierung des täglichen Verkehrsaufkommens wird die Nutzung von Kraftfahrzeugen mit geraden Endziffern auf gerade Kalenderwochen beschränkt. Kraftfahrzeuge mit ungeraden Endziffern dürfen entsprechend nur in ungeraden Kalenderwochen betrieben werden."
+yes_effects = Array[ExtResource("1_fbfkh")]([SubResource("Resource_b7jsy"), SubResource("Resource_7lw02")])
+no_effects = Array[ExtResource("1_fbfkh")]([SubResource("Resource_jhbsu")])
+metadata/_custom_type_script = "uid://kqivetqsxq66"
