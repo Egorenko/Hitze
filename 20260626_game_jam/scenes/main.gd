@@ -12,9 +12,9 @@ var card_pool: Array[card] = []
 var card_stack_: Array[card] = []
 var current_card_node: Node = null
 var test_stats: Array[stats] = []
-@onready var money = $LineMoney
-@onready var heat = $LineHeat
-@onready var happines = $LineHappiines
+@onready var money = $stat_bars/statsbar_money
+@onready var heat = $stat_bars/statsbar_temperature
+@onready var happines = $stat_bars/statsbar_mood
 @onready var yes = $ButtonYes
 @onready var no = $ButtonNo
 
