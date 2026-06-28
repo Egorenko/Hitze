@@ -177,18 +177,6 @@ icon = ExtResource("2_tbgi4")
 icon_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="LineMoney" type="Line2D" parent="." unique_id=2030511851]
-position = Vector2(-19, -160)
-points = PackedVector2Array(38, 445, 34, 593)
-
-[node name="LineHeat" type="Line2D" parent="." unique_id=1811252029]
-position = Vector2(-24, -103)
-points = PackedVector2Array(43, 237, 38.97766, 313.4231, 36, 370)
-
-[node name="LineHappiines" type="Line2D" parent="." unique_id=1537679031]
-position = Vector2(-25, -43)
-points = PackedVector2Array(43, 37, 41.38977, 137.64026, 41, 162)
-
 [node name="window_stage3_neutral" type="AnimatedSprite2D" parent="." unique_id=1675106314]
 position = Vector2(848, 289)
 scale = Vector2(4.543241, 4.543241)
