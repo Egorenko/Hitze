@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://ch0biet64j5pn" path="res://assets/ui/ui_card_background.png" id="8_jbj1t"]
 [ext_resource type="Texture2D" uid="uid://cx77355fw1lde" path="res://assets/ui/ui_disagree_default.png" id="9_muem4"]
 [ext_resource type="Texture2D" uid="uid://dxbh1r2jkge5r" path="res://assets/ui/ui_money_icon.png" id="12_gqmmt"]
+[ext_resource type="Texture2D" uid="uid://cbnkyqxk7r3la" path="res://assets/whiteboard.png" id="13_pm3ni"]
 [ext_resource type="Texture2D" uid="uid://x3vj7472uo1b" path="res://assets/ui/statsbar_leer.png" id="13_yc10j"]
 [ext_resource type="Texture2D" uid="uid://8n8ic5ifd5j1" path="res://assets/ui/statsbar_1.png" id="14_jscy8"]
 [ext_resource type="Texture2D" uid="uid://b4c2pwyhpt3fl" path="res://assets/ui/statsbar_2.png" id="15_pm3ni"]
@@ -141,22 +142,22 @@ texture = ExtResource("3_yc10j")
 [node name="floor" type="Sprite2D" parent="." unique_id=564277813]
 
 [node name="floor" type="Sprite2D" parent="floor" unique_id=1116236250]
-position = Vector2(174.66669, 530)
+position = Vector2(174.66669, 561.00006)
 scale = Vector2(5.3750005, 5.3750005)
 texture = ExtResource("3_jscy8")
 
 [node name="florr2" type="Sprite2D" parent="floor" unique_id=1523459061]
-position = Vector2(519, 530.00006)
+position = Vector2(518, 561.00006)
 scale = Vector2(5.3750005, 5.3750005)
 texture = ExtResource("3_jscy8")
 
 [node name="florr3" type="Sprite2D" parent="floor" unique_id=1906194535]
-position = Vector2(862.99994, 530)
+position = Vector2(861.9999, 561.00006)
 scale = Vector2(5.3750005, 5.3750005)
 texture = ExtResource("3_jscy8")
 
 [node name="florr4" type="Sprite2D" parent="floor" unique_id=482205361]
-position = Vector2(1207, 530)
+position = Vector2(1206.0001, 561)
 scale = Vector2(5.3750005, 5.3750005)
 texture = ExtResource("3_jscy8")
 
@@ -188,27 +189,32 @@ sprite_frames = SubResource("SpriteFrames_gw5b5")
 animation = &"window_lost"
 
 [node name="design_card_background" type="Sprite2D" parent="." unique_id=1355495405]
-position = Vector2(281, 168)
+position = Vector2(264.00003, 145)
 scale = Vector2(5.677083, 5.677083)
 texture = ExtResource("8_jbj1t")
 
 [node name="ButtonNo" type="Button" parent="." unique_id=1229762272]
-offset_left = 294.0
-offset_top = 215.0
-offset_right = 428.0
-offset_bottom = 269.0
+offset_left = 280.0
+offset_top = 193.0
+offset_right = 414.0
+offset_bottom = 247.0
 icon = ExtResource("9_muem4")
 icon_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="ButtonYes" type="Button" parent="." unique_id=1407809579]
-offset_left = 133.0
-offset_top = 217.0
-offset_right = 267.0
-offset_bottom = 269.0
+offset_left = 120.0
+offset_top = 193.0
+offset_right = 254.0
+offset_bottom = 245.0
 icon = ExtResource("4_o6xl0")
 icon_alignment = 1
 metadata/_edit_use_anchors_ = true
+
+[node name="whiteboard" type="Sprite2D" parent="." unique_id=1627519367]
+position = Vector2(360, 441.00003)
+scale = Vector2(6, 6)
+texture = ExtResource("13_pm3ni")
 
 [node name="design_workspace_merz" type="Sprite2D" parent="." unique_id=1335560741]
 position = Vector2(138.73256, 512.2674)
@@ -216,12 +222,12 @@ scale = Vector2(4.258357, 4.258357)
 texture = ExtResource("2_0wfyh")
 
 [node name="icon_money" type="Sprite2D" parent="." unique_id=188063717]
-position = Vector2(330, 377)
+position = Vector2(320, 350)
 scale = Vector2(1.6874986, 1.6874986)
 texture = ExtResource("12_gqmmt")
 
 [node name="statsbar_money" type="AnimatedSprite2D" parent="." unique_id=290042612]
-position = Vector2(460, 377)
+position = Vector2(455, 350)
 scale = Vector2(4.9970894, 4.9970894)
 sprite_frames = SubResource("SpriteFrames_akqkl")
 animation = &"statsbars"
@@ -229,12 +235,12 @@ frame = 3
 frame_progress = 0.56883484
 
 [node name="icon_mood" type="Sprite2D" parent="." unique_id=1329389843]
-position = Vector2(330, 469)
+position = Vector2(320, 440)
 scale = Vector2(1.71875, 1.71875)
 texture = ExtResource("19_vxglm")
 
 [node name="statsbar_mood" type="AnimatedSprite2D" parent="." unique_id=30343103]
-position = Vector2(460, 469)
+position = Vector2(455, 440)
 scale = Vector2(4.9970894, 4.9970894)
 sprite_frames = SubResource("SpriteFrames_akqkl")
 animation = &"statsbars"
@@ -242,12 +248,12 @@ frame = 3
 frame_progress = 0.56883484
 
 [node name="icon_temperature" type="Sprite2D" parent="." unique_id=869745420]
-position = Vector2(330, 558)
+position = Vector2(320, 530)
 scale = Vector2(1.7499998, 1.7499998)
 texture = ExtResource("20_2f3dj")
 
 [node name="statsbar_temperature" type="AnimatedSprite2D" parent="." unique_id=181762736]
-position = Vector2(459.99997, 558)
+position = Vector2(455, 530)
 scale = Vector2(4.9970894, 4.9970894)
 sprite_frames = SubResource("SpriteFrames_akqkl")
 animation = &"statsbars"
