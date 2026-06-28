@@ -1,10 +1,10 @@
-[gd_scene format=3 uid="uid://cgnhm1akexdvm"]
+[gd_scene format=3 uid="uid://8f5abqyd2juo"]
 
-[ext_resource type="Script" uid="uid://dkak0jk4gjimg" path="res://scenes/card.gd" id="1_d81rb"]
+[ext_resource type="Script" uid="uid://b3c8rmu78hovg" path="res://scripts/card_new/card_new_body.gd" id="1_xveu4"]
 
 [node name="Card" type="Sprite2D" unique_id=2126844789]
 position = Vector2(538, 322)
-script = ExtResource("1_d81rb")
+script = ExtResource("1_xveu4")
 
 [node name="LabelName" type="Label" parent="." unique_id=451787537]
 modulate = Color(0, 0, 0, 1)

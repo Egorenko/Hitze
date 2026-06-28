@@ -11,13 +11,6 @@ var cur:float = start
 @abstract func on_min() -> void
 @abstract func on_max() -> void
 
-enum operants{
-	mult = 0,
-	div = 1,
-	add = 2,
-	sub = 3
-}
-
 func update() -> void:
 	if cur <= min:
 		on_min()
@@ -27,14 +20,6 @@ func update() -> void:
 		on_max()
 		return
 
-func change(value:float, op:operants) -> void:
-	match op:
-		0:
-			cur = cur * value
-		1:
-			cur = cur / value
-		2:
-			cur = cur + value
-		3:
-			cur = cur - value
+func change(value:float, op:math_operators) -> void:
+	cur = op.use(cur, value)
 	update()
