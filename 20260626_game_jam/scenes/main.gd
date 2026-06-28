@@ -48,6 +48,10 @@ func spawn_card() -> void:
 			load_card(all_cards.choose_card())
 		else:
 			print("keine karten mehr")
+			$ButtonNo.visible = false
+			$ButtonYes.visible = false
+			$Button.visible = false
+			$extra/flag_germany.visible = true
 	else:
 		print("immer noch eine karte")
 		return
@@ -94,7 +98,7 @@ func update_stats() -> void:
 	happines.frame = int(PlayerManager.stat[0].cur / 16.6)
 	heat.frame = int(PlayerManager.stat[1].cur / 16.6)
 	#update window
-	$window_stage3_neutral.frame = int(PlayerManager.stat[0].cur / 25.0)
+	$window.frame = int(PlayerManager.stat[0].cur / 25.0)
 	for event in PlayerManager.event:
 		event.activate()
 #

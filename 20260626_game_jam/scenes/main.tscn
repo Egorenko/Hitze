@@ -154,11 +154,6 @@ texture = ExtResource("3_yc10j")
 
 [node name="floor" type="Sprite2D" parent="." unique_id=564277813]
 
-[node name="flag_germany" type="Sprite2D" parent="floor" unique_id=2047670497]
-position = Vector2(264, 137)
-scale = Vector2(3.9401038, 3.9401038)
-texture = ExtResource("3_y6deb")
-
 [node name="floor" type="Sprite2D" parent="floor" unique_id=1116236250]
 position = Vector2(174.66669, 561.00006)
 scale = Vector2(5.3750005, 5.3750005)
@@ -188,18 +183,14 @@ icon = ExtResource("2_tbgi4")
 icon_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="window_stage3_neutral" type="AnimatedSprite2D" parent="." unique_id=1675106314]
+[node name="window" type="AnimatedSprite2D" parent="." unique_id=1675106314]
 position = Vector2(848, 289)
 scale = Vector2(4.543241, 4.543241)
 sprite_frames = SubResource("SpriteFrames_gw5b5")
 animation = &"window_lost"
 
-[node name="design_card_background" type="Sprite2D" parent="." unique_id=1355495405]
-position = Vector2(264.00003, 145)
-scale = Vector2(5.677083, 5.677083)
-texture = ExtResource("8_jbj1t")
-
 [node name="ButtonNo" type="Button" parent="." unique_id=1229762272]
+z_index = 1
 offset_left = 280.0
 offset_top = 193.0
 offset_right = 414.0
@@ -209,6 +200,7 @@ icon_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="ButtonYes" type="Button" parent="." unique_id=1407809579]
+z_index = 1
 offset_left = 120.0
 offset_top = 193.0
 offset_right = 254.0
@@ -222,33 +214,35 @@ position = Vector2(360, 441.00003)
 scale = Vector2(6, 6)
 texture = ExtResource("13_pm3ni")
 
+[node name="design_card_background" type="Sprite2D" parent="." unique_id=1355495405]
+position = Vector2(264.00003, 145.00003)
+scale = Vector2(5.677083, 5.677083)
+texture = ExtResource("8_jbj1t")
+
 [node name="design_workspace_merz" type="Sprite2D" parent="." unique_id=1335560741]
 position = Vector2(138.73256, 512.2674)
 scale = Vector2(4.258357, 4.258357)
 texture = ExtResource("2_0wfyh")
 
-[node name="icon_money" type="Sprite2D" parent="." unique_id=188063717]
-position = Vector2(320, 350)
-scale = Vector2(1.6874986, 1.6874986)
-texture = ExtResource("12_gqmmt")
+[node name="Card" parent="." unique_id=2126844789 instance=ExtResource("5_tbgi4")]
+position = Vector2(264, 180)
 
-[node name="icon_mood" type="Sprite2D" parent="." unique_id=1329389843]
-position = Vector2(320, 440)
-scale = Vector2(1.71875, 1.71875)
-texture = ExtResource("19_vxglm")
+[node name="icons" type="Node2D" parent="." unique_id=1891307443]
 
-[node name="icon_temperature" type="Sprite2D" parent="." unique_id=869745420]
+[node name="icon_temperature" type="Sprite2D" parent="icons" unique_id=869745420]
 position = Vector2(320, 530)
 scale = Vector2(1.7499998, 1.7499998)
 texture = ExtResource("20_2f3dj")
 
-[node name="certificate" type="Sprite2D" parent="." unique_id=449274665]
-position = Vector2(160, 385)
-scale = Vector2(2.3333333, 2.3333333)
-texture = ExtResource("25_og1vs")
+[node name="icon_mood" type="Sprite2D" parent="icons" unique_id=1329389843]
+position = Vector2(320, 440)
+scale = Vector2(1.71875, 1.71875)
+texture = ExtResource("19_vxglm")
 
-[node name="Card" parent="." unique_id=2126844789 instance=ExtResource("5_tbgi4")]
-position = Vector2(264, 180)
+[node name="icon_money" type="Sprite2D" parent="icons" unique_id=188063717]
+position = Vector2(320, 350)
+scale = Vector2(1.6874986, 1.6874986)
+texture = ExtResource("12_gqmmt")
 
 [node name="stat_bars" type="Node2D" parent="." unique_id=662663315]
 
@@ -275,6 +269,19 @@ sprite_frames = SubResource("SpriteFrames_akqkl")
 animation = &"statsbars"
 frame = 3
 frame_progress = 0.56883484
+
+[node name="extra" type="Node2D" parent="." unique_id=759758668]
+
+[node name="certificate" type="Sprite2D" parent="extra" unique_id=449274665]
+position = Vector2(160, 385)
+scale = Vector2(2.3333333, 2.3333333)
+texture = ExtResource("25_og1vs")
+
+[node name="flag_germany" type="Sprite2D" parent="extra" unique_id=2047670497]
+visible = false
+position = Vector2(264, 137)
+scale = Vector2(3.9401038, 3.9401038)
+texture = ExtResource("3_y6deb")
 
 [connection signal="button_down" from="Button" to="." method="spawn_card"]
 [connection signal="button_down" from="ButtonNo" to="." method="_on_button_no_button_down"]
