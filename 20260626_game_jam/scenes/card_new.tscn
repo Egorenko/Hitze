@@ -9,20 +9,19 @@ script = ExtResource("1_xveu4")
 [node name="LabelName" type="Label" parent="." unique_id=451787537]
 modulate = Color(0, 0, 0, 1)
 self_modulate = Color(1, 1, 1, 0.9647059)
-offset_left = -63.0
-offset_top = -142.0
-offset_right = 68.0
-offset_bottom = -119.0
-text = "/titel"
-horizontal_alignment = 1
-vertical_alignment = 1
+offset_left = -130.0
+offset_top = -162.0
+offset_right = 102.0
+offset_bottom = -139.0
+autowrap_mode = 2
 
 [node name="LabelText" type="Label" parent="." unique_id=1762514176]
 modulate = Color(0, 0, 0, 1)
-offset_left = -67.0
-offset_top = -69.0
-offset_right = 67.0
-offset_bottom = 140.0
-text = "/text"
-autowrap_mode = 3
+anchors_preset = -1
+anchor_left = -114.00001
+offset_left = -23.999992
+offset_top = -90.0
+offset_right = 174.0
+offset_bottom = 119.0
+autowrap_mode = 2
 text_overrun_behavior = 2
