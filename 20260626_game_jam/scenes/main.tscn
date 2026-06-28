@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://ch0biet64j5pn" path="res://assets/ui/ui_card_background.png" id="8_jbj1t"]
 [ext_resource type="Texture2D" uid="uid://cx77355fw1lde" path="res://assets/ui/ui_disagree_default.png" id="9_muem4"]
 [ext_resource type="Texture2D" uid="uid://dxbh1r2jkge5r" path="res://assets/ui/ui_money_icon.png" id="12_gqmmt"]
+[ext_resource type="Texture2D" uid="uid://b71l0gyphnuu7" path="res://assets/window_stage1_atompilz.png" id="13_fv21b"]
 [ext_resource type="Texture2D" uid="uid://cbnkyqxk7r3la" path="res://assets/whiteboard.png" id="13_pm3ni"]
 [ext_resource type="Texture2D" uid="uid://x3vj7472uo1b" path="res://assets/ui/statsbar_leer.png" id="13_yc10j"]
 [ext_resource type="Texture2D" uid="uid://8n8ic5ifd5j1" path="res://assets/ui/statsbar_1.png" id="14_jscy8"]
@@ -58,6 +59,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("7_jkv2x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_fv21b")
 }],
 "loop": 0,
 "name": &"window_lost",
