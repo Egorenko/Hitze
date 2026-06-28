@@ -24,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://55cf8e6uk854" path="res://assets/ui/statsbar_5.png" id="18_2wyq8"]
 [ext_resource type="Texture2D" uid="uid://bh61j7mjtw72r" path="res://assets/ui/ui_mood_icon_2.png" id="19_vxglm"]
 [ext_resource type="Texture2D" uid="uid://dpbjmvfr5xt8y" path="res://assets/ui/ui_temperature_icon.png" id="20_2f3dj"]
+[ext_resource type="Texture2D" uid="uid://cgy4h14d5v1av" path="res://assets/certificate.png" id="25_og1vs"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gw5b5"]
 animations = [{
@@ -265,5 +266,10 @@ sprite_frames = SubResource("SpriteFrames_akqkl")
 animation = &"statsbars"
 frame = 3
 frame_progress = 0.56883484
+
+[node name="certificate" type="Sprite2D" parent="." unique_id=449274665]
+position = Vector2(160, 385)
+scale = Vector2(2.3333333, 2.3333333)
+texture = ExtResource("25_og1vs")
 
 [connection signal="button_down" from="Button" to="." method="spawn_card"]
