@@ -22,6 +22,7 @@ var test_stats: Array[stats] = []
 @export var all_cards:card_stack
 
 func _ready() -> void:
+	update_stats()
 	all_cards.setup()
 	
 	test_stats.append(test_happiness)
@@ -80,11 +81,19 @@ func card_on() -> void:
 	card_body.visible = true
 	card_body.moveable = true
 	card_on_feld = true
+	update_stats()
 
 func card_off() -> void:
 	card_body.visible = false
 	card_body.moveable = false
 	card_on_feld = false
+	update_stats()
+
+func update_stats() -> void:
+	money.frame = int(PlayerManager.stat[2].cur / 16.6)
+	happines.frame = int(PlayerManager.stat[0].cur / 16.6)
+	heat.frame = int(PlayerManager.stat[1].cur / 16.6)
+	pass
 #
 func _on_card_played(direction: String) -> void:
 	card_on_feld = false
