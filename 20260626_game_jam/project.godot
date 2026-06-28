@@ -23,6 +23,7 @@ PlayerManager="*uid://biydpkmas6xtj"
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+mouse_cursor/custom_image="uid://2fpxo7w8l8rg"
 
 [physics]
 
