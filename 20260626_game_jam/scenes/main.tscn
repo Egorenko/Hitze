@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://d334vwxteln1n" path="res://assets/ui/statsbar_3.png" id="16_y6deb"]
 [ext_resource type="Texture2D" uid="uid://bvxq77trh8r3" path="res://assets/ui/statsbar_4.png" id="17_og1vs"]
 [ext_resource type="Texture2D" uid="uid://55cf8e6uk854" path="res://assets/ui/statsbar_5.png" id="18_2wyq8"]
+[ext_resource type="Texture2D" uid="uid://bh61j7mjtw72r" path="res://assets/ui/ui_mood_icon_2.png" id="19_vxglm"]
 [ext_resource type="Texture2D" uid="uid://dpbjmvfr5xt8y" path="res://assets/ui/ui_temperature_icon.png" id="20_2f3dj"]
 [ext_resource type="Texture2D" uid="uid://c6gqvee2cp4" path="res://assets/merz_workspace.png" id="25_2wyq8"]
 [ext_resource type="Texture2D" uid="uid://cgy4h14d5v1av" path="res://assets/certificate.png" id="25_og1vs"]
@@ -529,8 +530,6 @@ position = Vector2(360, 441.00003)
 scale = Vector2(6, 6)
 texture = ExtResource("13_pm3ni")
 
-[node name="icon_money" type="Sprite2D" parent="." unique_id=188063717]
-
 [node name="design_card_background" type="Sprite2D" parent="." unique_id=1355495405]
 position = Vector2(264.00003, 145.00003)
 scale = Vector2(5.677083, 5.677083)
@@ -546,7 +545,12 @@ position = Vector2(320, 530)
 scale = Vector2(1.7499998, 1.7499998)
 texture = ExtResource("20_2f3dj")
 
-[node name="icon_mood" type="Sprite2D" parent="icons" unique_id=1329389843]
+[node name="icon_mood" type="Sprite2D" parent="icons" unique_id=188063717]
+position = Vector2(322.00003, 441)
+scale = Vector2(1.75, 1.75)
+texture = ExtResource("19_vxglm")
+
+[node name="icon_money" type="Sprite2D" parent="icons" unique_id=1329389843]
 position = Vector2(320, 350)
 scale = Vector2(1.6874986, 1.6874986)
 texture = ExtResource("12_gqmmt")
