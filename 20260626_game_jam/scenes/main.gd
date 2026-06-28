@@ -93,6 +93,8 @@ func update_stats() -> void:
 	money.frame = int(PlayerManager.stat[2].cur / 16.6)
 	happines.frame = int(PlayerManager.stat[0].cur / 16.6)
 	heat.frame = int(PlayerManager.stat[1].cur / 16.6)
+	#update window
+	$window_stage3_neutral.frame = int(PlayerManager.stat[0].cur / 25.0)
 	for event in PlayerManager.event:
 		event.activate()
 #
